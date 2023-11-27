@@ -1,0 +1,1001 @@
+gameID,publisherID,Title,mainCate,price,release
+1,996,The Legend of Zelda: Breath of the Wild,Platformer,42.66,7/1/1998
+2,955,The Legend of Zelda: Breath of the Wild,Puzzle,7.31,2/6/2004
+3,44,Fortnite,Strategy,26.25,11/18/2022
+4,258,Assassin's Creed Odyssey,Fighting,74.66,9/23/2001
+5,762,Super Mario Odyssey,Strategy,47.3,11/20/2008
+6,191,God of War,Simulation,14.72,4/8/2006
+7,549,FIFA 20,Fighting,32.92,2/1/2011
+8,172,FIFA 20,Strategy,68.26,11/3/1998
+9,26,God of War,Role-playing,14.13,11/26/2009
+10,174,The Legend of Zelda: Breath of the Wild,Sports,45.39,7/1/2014
+11,146,God of War,Strategy,33.23,9/9/2010
+12,756,Grand Theft Auto V,Puzzle,83.72,6/16/2007
+13,845,Assassin's Creed Odyssey,Sports,96.92,7/16/2001
+14,175,Call of Duty: Modern Warfare,Puzzle,19.74,1/9/2004
+15,714,The Legend of Zelda: Breath of the Wild,Racing,19.11,12/2/2009
+16,448,FIFA 20,Role-playing,15.53,7/12/1997
+17,763,Fortnite,Adventure,69.22,5/17/2020
+18,629,Grand Theft Auto V,Adventure,85.36,2/4/1991
+19,530,God of War,Action,68.89,3/13/2012
+20,459,God of War,Simulation,97.61,9/27/2013
+21,218,Fortnite,Adventure,72.29,2/3/1998
+22,822,Assassin's Creed Odyssey,Fighting,57.71,6/5/2011
+23,338,Fortnite,Platformer,53.63,12/16/1990
+24,939,Minecraft,Platformer,14.95,12/21/2002
+25,899,Minecraft,Strategy,20.13,12/29/1992
+26,212,Grand Theft Auto V,Adventure,40.86,7/11/1995
+27,618,Fortnite,Racing,76.38,9/16/2014
+28,963,The Legend of Zelda: Breath of the Wild,Action,62.81,5/4/1996
+29,282,Call of Duty: Modern Warfare,Platformer,37.06,1/20/2020
+30,803,Call of Duty: Modern Warfare,Simulation,69.35,7/6/2023
+31,804,Assassin's Creed Odyssey,Platformer,15.0,6/4/2007
+32,850,Red Dead Redemption 2,Strategy,99.81,5/31/2004
+33,697,Grand Theft Auto V,Racing,4.39,3/10/2021
+34,916,FIFA 20,Puzzle,74.69,12/28/2017
+35,249,Minecraft,Action,53.26,1/1/2011
+36,842,Assassin's Creed Odyssey,Platformer,11.41,5/12/1998
+37,342,Grand Theft Auto V,Puzzle,90.74,1/25/2020
+38,339,Assassin's Creed Odyssey,Puzzle,21.78,8/22/2004
+39,276,Grand Theft Auto V,Simulation,55.78,7/25/2021
+40,432,The Legend of Zelda: Breath of the Wild,Platformer,50.2,4/27/2018
+41,821,Assassin's Creed Odyssey,Action,96.63,4/16/2005
+42,883,Super Mario Odyssey,Role-playing,57.73,2/25/1998
+43,625,FIFA 20,Racing,5.11,1/19/2005
+44,210,Fortnite,Simulation,80.68,12/21/1995
+45,122,Fortnite,Adventure,73.43,6/27/2003
+46,304,Grand Theft Auto V,Platformer,85.93,3/8/2014
+47,403,The Legend of Zelda: Breath of the Wild,Sports,35.2,1/20/2006
+48,925,God of War,Adventure,10.27,8/19/2010
+49,550,Fortnite,Sports,85.42,1/11/1991
+50,583,Assassin's Creed Odyssey,Adventure,9.86,1/12/1991
+51,298,The Legend of Zelda: Breath of the Wild,Action,76.78,3/26/2012
+52,367,Fortnite,Platformer,73.94,9/23/1995
+53,539,Fortnite,Strategy,55.98,4/4/1996
+54,84,Super Mario Odyssey,Platformer,3.15,6/22/1999
+55,442,Call of Duty: Modern Warfare,Simulation,71.7,6/15/2010
+56,814,Grand Theft Auto V,Sports,69.99,2/8/2003
+57,543,The Legend of Zelda: Breath of the Wild,Racing,27.73,8/17/2014
+58,188,Red Dead Redemption 2,Racing,90.71,11/8/2003
+59,961,Minecraft,Puzzle,42.34,3/21/1992
+60,651,FIFA 20,Racing,56.81,2/25/2002
+61,737,Grand Theft Auto V,Platformer,15.24,12/26/2003
+62,831,Super Mario Odyssey,Role-playing,47.07,2/16/2021
+63,798,Fortnite,Adventure,0.33,12/3/2012
+64,911,Call of Duty: Modern Warfare,Action,96.32,7/26/2012
+65,905,Minecraft,Sports,9.03,7/15/2000
+66,657,Minecraft,Strategy,63.25,8/15/2010
+67,37,FIFA 20,Action,87.89,7/16/1992
+68,23,FIFA 20,Role-playing,53.47,9/25/2011
+69,578,The Legend of Zelda: Breath of the Wild,Racing,42.48,8/24/1998
+70,448,Call of Duty: Modern Warfare,Racing,74.5,9/24/2007
+71,754,Call of Duty: Modern Warfare,Action,92.65,4/5/2017
+72,6,Assassin's Creed Odyssey,Simulation,47.93,11/9/2005
+73,224,God of War,Platformer,14.0,5/12/2000
+74,623,Minecraft,Role-playing,79.41,9/6/2006
+75,553,FIFA 20,Fighting,13.04,4/25/2023
+76,275,Red Dead Redemption 2,Adventure,72.63,2/3/2005
+77,480,God of War,Racing,50.87,12/3/1994
+78,737,The Legend of Zelda: Breath of the Wild,Racing,11.34,12/19/2001
+79,56,Red Dead Redemption 2,Sports,96.14,9/20/1995
+80,187,Assassin's Creed Odyssey,Adventure,47.05,8/19/2014
+81,27,Super Mario Odyssey,Adventure,27.0,7/25/2021
+82,644,God of War,Fighting,71.76,8/6/1993
+83,870,Super Mario Odyssey,Sports,0.43,7/25/2020
+84,679,Super Mario Odyssey,Platformer,0.83,5/28/1995
+85,160,Minecraft,Action,16.47,2/9/2022
+86,335,Grand Theft Auto V,Sports,35.04,6/8/1991
+87,191,Red Dead Redemption 2,Role-playing,60.15,11/25/2018
+88,178,Red Dead Redemption 2,Adventure,99.69,10/26/2006
+89,64,Fortnite,Action,17.72,5/15/1996
+90,803,Super Mario Odyssey,Strategy,47.03,6/28/1998
+91,520,Grand Theft Auto V,Puzzle,24.18,1/5/2002
+92,647,Call of Duty: Modern Warfare,Sports,35.7,6/20/2019
+93,948,Grand Theft Auto V,Platformer,69.64,1/19/1992
+94,227,Minecraft,Adventure,39.08,12/21/1998
+95,408,Assassin's Creed Odyssey,Adventure,48.64,5/25/2016
+96,743,God of War,Platformer,14.46,7/2/2002
+97,603,Assassin's Creed Odyssey,Sports,92.28,4/12/1994
+98,375,FIFA 20,Racing,98.96,7/18/2002
+99,499,Fortnite,Adventure,92.71,6/12/2021
+100,564,Assassin's Creed Odyssey,Puzzle,1.8,11/4/1994
+101,114,Super Mario Odyssey,Sports,41.07,2/1/1995
+102,52,Assassin's Creed Odyssey,Puzzle,2.41,6/15/2012
+103,445,Red Dead Redemption 2,Action,54.71,11/29/2004
+104,313,Call of Duty: Modern Warfare,Action,2.35,3/13/2013
+105,103,God of War,Racing,88.19,1/14/2014
+106,856,Minecraft,Adventure,39.04,2/5/2020
+107,976,Assassin's Creed Odyssey,Racing,19.98,2/27/2008
+108,362,The Legend of Zelda: Breath of the Wild,Strategy,90.29,3/8/1991
+109,948,Grand Theft Auto V,Role-playing,99.81,9/5/2008
+110,46,The Legend of Zelda: Breath of the Wild,Strategy,84.52,8/8/2023
+111,449,The Legend of Zelda: Breath of the Wild,Action,34.7,6/21/2019
+112,389,FIFA 20,Simulation,52.57,9/12/2003
+113,680,God of War,Simulation,70.31,1/9/2010
+114,221,Red Dead Redemption 2,Platformer,99.7,10/23/2000
+115,790,Fortnite,Puzzle,86.62,5/25/2003
+116,874,The Legend of Zelda: Breath of the Wild,Puzzle,63.1,7/12/2002
+117,997,God of War,Simulation,41.1,1/23/1992
+118,106,Grand Theft Auto V,Strategy,77.45,3/19/1996
+119,224,God of War,Adventure,60.68,12/7/2009
+120,116,Minecraft,Action,51.94,1/4/2008
+121,455,Grand Theft Auto V,Fighting,88.94,4/12/1998
+122,930,Fortnite,Action,17.12,6/4/2017
+123,683,FIFA 20,Puzzle,53.22,12/31/2004
+124,406,Minecraft,Fighting,89.61,6/8/2008
+125,500,God of War,Sports,75.2,11/25/2005
+126,457,Grand Theft Auto V,Strategy,59.65,6/30/2001
+127,114,FIFA 20,Role-playing,50.88,12/31/2012
+128,630,God of War,Sports,94.43,12/21/2022
+129,662,Fortnite,Action,26.91,4/8/2021
+130,30,Fortnite,Sports,48.66,1/20/1994
+131,679,Minecraft,Adventure,27.96,11/5/2015
+132,436,The Legend of Zelda: Breath of the Wild,Simulation,46.85,1/3/2022
+133,713,Assassin's Creed Odyssey,Simulation,18.72,7/14/2016
+134,533,FIFA 20,Sports,83.78,4/8/2006
+135,843,Red Dead Redemption 2,Action,1.9,1/10/1991
+136,114,Grand Theft Auto V,Fighting,25.72,11/16/2001
+137,608,FIFA 20,Role-playing,78.7,7/27/2023
+138,783,Minecraft,Racing,32.3,11/28/2008
+139,698,God of War,Adventure,24.54,10/23/1999
+140,223,The Legend of Zelda: Breath of the Wild,Role-playing,39.35,11/19/2001
+141,986,Super Mario Odyssey,Role-playing,88.97,4/2/2016
+142,1000,The Legend of Zelda: Breath of the Wild,Action,7.74,4/13/2020
+143,841,The Legend of Zelda: Breath of the Wild,Platformer,32.37,3/21/2005
+144,746,FIFA 20,Simulation,60.31,4/19/2004
+145,850,FIFA 20,Strategy,18.92,2/12/2018
+146,734,Minecraft,Strategy,13.78,4/28/2022
+147,290,Red Dead Redemption 2,Fighting,12.33,8/18/2015
+148,980,God of War,Simulation,19.81,5/23/2006
+149,576,FIFA 20,Racing,14.47,8/21/2007
+150,419,Assassin's Creed Odyssey,Role-playing,21.14,8/13/2009
+151,599,Assassin's Creed Odyssey,Simulation,52.66,10/14/1998
+152,254,Call of Duty: Modern Warfare,Puzzle,89.74,1/20/2012
+153,638,FIFA 20,Fighting,58.1,5/20/2000
+154,983,FIFA 20,Role-playing,0.69,7/26/2018
+155,430,FIFA 20,Action,23.64,6/7/2010
+156,228,Fortnite,Sports,90.23,10/8/2010
+157,399,Fortnite,Simulation,44.53,9/16/1991
+158,948,Minecraft,Fighting,30.54,7/27/2016
+159,519,The Legend of Zelda: Breath of the Wild,Strategy,15.33,8/21/2021
+160,534,God of War,Fighting,31.22,3/18/1994
+161,229,FIFA 20,Role-playing,95.02,11/22/1995
+162,779,God of War,Role-playing,3.47,10/21/2017
+163,545,FIFA 20,Racing,52.68,5/3/2000
+164,877,Assassin's Creed Odyssey,Simulation,57.66,3/5/1999
+165,207,Grand Theft Auto V,Action,11.32,2/4/1993
+166,610,The Legend of Zelda: Breath of the Wild,Fighting,9.43,5/9/2014
+167,579,Fortnite,Action,85.65,8/14/2005
+168,426,God of War,Role-playing,77.15,8/12/2005
+169,271,Super Mario Odyssey,Puzzle,96.79,4/1/2018
+170,689,Fortnite,Sports,13.72,10/17/1998
+171,812,Assassin's Creed Odyssey,Strategy,85.1,2/18/2012
+172,618,FIFA 20,Platformer,52.42,11/14/2018
+173,896,FIFA 20,Sports,30.21,8/28/2017
+174,215,Super Mario Odyssey,Sports,90.79,4/29/2003
+175,10,FIFA 20,Fighting,86.51,9/22/1993
+176,928,Grand Theft Auto V,Platformer,64.44,5/1/2004
+177,738,The Legend of Zelda: Breath of the Wild,Fighting,50.97,2/15/1995
+178,290,Call of Duty: Modern Warfare,Puzzle,68.3,11/24/2020
+179,557,Grand Theft Auto V,Puzzle,59.33,8/22/1999
+180,576,God of War,Adventure,99.86,12/16/2003
+181,696,The Legend of Zelda: Breath of the Wild,Platformer,10.95,4/1/2011
+182,804,Super Mario Odyssey,Strategy,64.18,5/27/2008
+183,203,FIFA 20,Strategy,29.2,5/3/2003
+184,716,Red Dead Redemption 2,Strategy,63.51,8/13/2013
+185,453,Minecraft,Puzzle,1.28,10/11/2021
+186,358,Red Dead Redemption 2,Role-playing,82.64,12/29/2009
+187,629,Call of Duty: Modern Warfare,Fighting,57.74,4/7/2000
+188,718,Super Mario Odyssey,Strategy,52.06,8/24/2000
+189,873,Super Mario Odyssey,Strategy,27.03,7/13/2023
+190,136,Super Mario Odyssey,Action,96.66,3/1/2005
+191,905,FIFA 20,Platformer,63.18,2/6/2005
+192,128,Grand Theft Auto V,Puzzle,6.26,7/26/2003
+193,896,Red Dead Redemption 2,Racing,67.93,5/8/2023
+194,630,Call of Duty: Modern Warfare,Action,39.45,12/16/2020
+195,750,Super Mario Odyssey,Simulation,48.27,5/18/2021
+196,658,The Legend of Zelda: Breath of the Wild,Puzzle,99.96,9/3/1996
+197,535,God of War,Racing,70.08,4/2/2006
+198,770,Fortnite,Role-playing,68.43,6/27/1995
+199,96,The Legend of Zelda: Breath of the Wild,Platformer,53.29,8/16/2016
+200,230,Minecraft,Puzzle,58.61,6/13/2001
+201,562,The Legend of Zelda: Breath of the Wild,Action,37.71,1/25/2019
+202,614,Red Dead Redemption 2,Racing,74.73,7/23/2019
+203,908,Fortnite,Racing,70.21,12/20/1995
+204,130,Super Mario Odyssey,Simulation,81.87,3/11/1991
+205,723,God of War,Racing,60.78,8/3/2015
+206,226,Call of Duty: Modern Warfare,Adventure,51.56,9/14/1999
+207,89,Grand Theft Auto V,Adventure,78.92,12/24/1991
+208,863,Super Mario Odyssey,Fighting,70.08,5/3/2003
+209,93,Call of Duty: Modern Warfare,Action,11.57,11/1/2005
+210,299,Grand Theft Auto V,Platformer,5.13,8/8/1998
+211,851,Grand Theft Auto V,Simulation,92.84,5/20/1998
+212,280,Call of Duty: Modern Warfare,Role-playing,90.6,4/29/2003
+213,728,Minecraft,Sports,90.22,8/11/1993
+214,923,Super Mario Odyssey,Sports,82.82,3/9/2015
+215,733,Red Dead Redemption 2,Simulation,68.13,7/20/2006
+216,984,Red Dead Redemption 2,Adventure,54.55,10/7/2007
+217,1,Super Mario Odyssey,Strategy,94.98,8/22/1998
+218,160,Call of Duty: Modern Warfare,Fighting,24.44,11/29/2001
+219,561,Call of Duty: Modern Warfare,Platformer,90.16,1/25/2016
+220,625,God of War,Puzzle,58.65,5/22/1999
+221,71,Super Mario Odyssey,Puzzle,31.91,10/18/2015
+222,646,Super Mario Odyssey,Strategy,64.36,9/2/2018
+223,369,The Legend of Zelda: Breath of the Wild,Adventure,32.04,4/14/2002
+224,132,Fortnite,Fighting,3.1,3/21/2005
+225,949,God of War,Action,6.22,5/30/2003
+226,9,The Legend of Zelda: Breath of the Wild,Role-playing,35.48,8/4/2009
+227,3,Minecraft,Puzzle,90.32,8/24/1995
+228,156,Minecraft,Fighting,8.88,2/4/1995
+229,165,Super Mario Odyssey,Simulation,39.59,6/7/2013
+230,79,Assassin's Creed Odyssey,Strategy,34.76,5/2/1999
+231,953,Fortnite,Role-playing,5.24,9/14/2002
+232,977,FIFA 20,Action,83.17,12/20/1999
+233,594,Grand Theft Auto V,Adventure,69.43,8/1/1998
+234,199,Fortnite,Strategy,3.68,3/31/2019
+235,622,Red Dead Redemption 2,Action,73.5,2/1/2008
+236,13,Red Dead Redemption 2,Platformer,77.67,1/13/2011
+237,52,Fortnite,Platformer,29.45,11/27/1995
+238,636,The Legend of Zelda: Breath of the Wild,Action,69.32,1/16/1995
+239,640,Super Mario Odyssey,Simulation,49.12,12/19/1992
+240,769,Call of Duty: Modern Warfare,Role-playing,30.18,7/20/2001
+241,20,The Legend of Zelda: Breath of the Wild,Puzzle,57.35,5/13/2005
+242,685,FIFA 20,Adventure,41.04,7/14/1998
+243,126,FIFA 20,Puzzle,95.38,12/1/2003
+244,397,Assassin's Creed Odyssey,Strategy,16.19,1/20/2018
+245,988,Minecraft,Adventure,88.49,2/3/2018
+246,381,Fortnite,Sports,49.42,6/5/2016
+247,100,FIFA 20,Sports,66.89,1/12/1998
+248,443,FIFA 20,Action,46.65,6/30/2017
+249,761,Minecraft,Action,39.52,9/8/2007
+250,658,The Legend of Zelda: Breath of the Wild,Platformer,86.0,2/5/1991
+251,170,Call of Duty: Modern Warfare,Simulation,37.22,12/8/2002
+252,72,Call of Duty: Modern Warfare,Simulation,15.28,4/25/2000
+253,494,Assassin's Creed Odyssey,Racing,34.24,12/22/2014
+254,515,The Legend of Zelda: Breath of the Wild,Sports,27.91,8/7/2000
+255,536,Call of Duty: Modern Warfare,Role-playing,61.5,8/28/2008
+256,677,The Legend of Zelda: Breath of the Wild,Action,35.16,4/24/2005
+257,688,The Legend of Zelda: Breath of the Wild,Action,47.1,2/23/2005
+258,488,FIFA 20,Racing,97.79,6/1/2019
+259,687,God of War,Action,45.16,12/21/1998
+260,132,Minecraft,Sports,83.59,1/20/1991
+261,649,Minecraft,Fighting,23.69,10/18/2015
+262,663,Grand Theft Auto V,Simulation,69.57,4/21/2014
+263,385,Assassin's Creed Odyssey,Racing,92.23,4/30/2008
+264,845,Minecraft,Puzzle,68.5,10/30/2022
+265,935,Red Dead Redemption 2,Strategy,86.87,3/4/1994
+266,173,FIFA 20,Puzzle,96.9,7/9/1998
+267,494,FIFA 20,Racing,0.48,12/30/2016
+268,979,Minecraft,Adventure,23.18,11/5/1992
+269,315,The Legend of Zelda: Breath of the Wild,Strategy,55.86,8/10/2023
+270,391,God of War,Simulation,86.45,8/21/2019
+271,210,Grand Theft Auto V,Simulation,49.6,4/1/1994
+272,684,God of War,Adventure,14.78,10/28/2020
+273,458,Fortnite,Fighting,93.39,8/12/2019
+274,20,Grand Theft Auto V,Strategy,95.62,2/13/2007
+275,60,Super Mario Odyssey,Platformer,76.0,11/23/2003
+276,104,The Legend of Zelda: Breath of the Wild,Strategy,7.44,7/13/1993
+277,757,The Legend of Zelda: Breath of the Wild,Strategy,87.43,9/13/1994
+278,251,God of War,Strategy,17.51,11/24/2016
+279,720,Minecraft,Simulation,95.95,6/1/1994
+280,269,Grand Theft Auto V,Role-playing,80.39,2/22/2006
+281,368,Minecraft,Racing,35.5,12/29/1999
+282,939,Minecraft,Action,80.54,4/25/2004
+283,207,The Legend of Zelda: Breath of the Wild,Puzzle,96.4,12/23/2017
+284,421,Super Mario Odyssey,Platformer,96.35,9/5/2009
+285,602,Minecraft,Sports,45.6,2/22/2020
+286,465,Red Dead Redemption 2,Role-playing,74.56,10/18/1994
+287,138,Grand Theft Auto V,Sports,0.17,11/13/2018
+288,123,The Legend of Zelda: Breath of the Wild,Puzzle,9.99,9/15/1994
+289,797,Grand Theft Auto V,Simulation,5.22,1/17/2015
+290,136,Fortnite,Role-playing,24.88,11/3/2020
+291,125,Minecraft,Sports,67.7,11/12/2020
+292,972,The Legend of Zelda: Breath of the Wild,Strategy,78.31,8/21/2000
+293,151,Call of Duty: Modern Warfare,Simulation,20.87,3/19/2016
+294,336,Red Dead Redemption 2,Simulation,66.54,4/4/2005
+295,904,Super Mario Odyssey,Simulation,58.77,6/10/2009
+296,763,Red Dead Redemption 2,Adventure,4.8,8/16/2020
+297,590,Fortnite,Adventure,15.92,11/18/2014
+298,64,FIFA 20,Action,24.02,6/12/2006
+299,362,FIFA 20,Platformer,25.72,8/25/2003
+300,332,The Legend of Zelda: Breath of the Wild,Simulation,83.35,7/30/1997
+301,925,The Legend of Zelda: Breath of the Wild,Action,85.21,4/27/2006
+302,826,Minecraft,Platformer,25.93,6/3/2021
+303,351,Red Dead Redemption 2,Sports,9.4,10/12/2013
+304,664,God of War,Puzzle,54.56,8/20/2011
+305,637,God of War,Racing,12.61,4/16/2001
+306,89,The Legend of Zelda: Breath of the Wild,Adventure,86.52,12/9/2008
+307,352,Call of Duty: Modern Warfare,Sports,88.55,2/3/2005
+308,269,God of War,Racing,29.07,3/22/2009
+309,667,Minecraft,Sports,34.48,5/19/1999
+310,403,God of War,Role-playing,20.65,9/24/2014
+311,648,Assassin's Creed Odyssey,Simulation,50.33,1/20/2015
+312,706,Grand Theft Auto V,Strategy,72.06,1/7/2009
+313,116,Assassin's Creed Odyssey,Strategy,45.13,1/5/1994
+314,754,Super Mario Odyssey,Platformer,57.82,7/12/2002
+315,39,The Legend of Zelda: Breath of the Wild,Sports,45.48,9/9/2018
+316,814,The Legend of Zelda: Breath of the Wild,Racing,79.85,4/23/1993
+317,352,Call of Duty: Modern Warfare,Sports,61.84,5/12/2018
+318,847,Super Mario Odyssey,Fighting,1.67,9/3/2006
+319,887,FIFA 20,Fighting,83.65,2/7/2022
+320,114,Red Dead Redemption 2,Puzzle,58.98,8/20/2019
+321,48,Red Dead Redemption 2,Fighting,70.05,2/28/2001
+322,172,Grand Theft Auto V,Strategy,11.58,10/28/2018
+323,109,Fortnite,Fighting,83.04,10/22/2007
+324,544,Grand Theft Auto V,Action,59.99,1/6/1993
+325,771,Fortnite,Sports,75.88,12/19/2013
+326,425,Assassin's Creed Odyssey,Fighting,22.49,10/11/2012
+327,102,Grand Theft Auto V,Action,4.53,2/25/2006
+328,812,Red Dead Redemption 2,Sports,59.74,3/17/2000
+329,506,Minecraft,Puzzle,18.84,7/27/2003
+330,417,God of War,Fighting,34.26,8/2/2000
+331,702,FIFA 20,Action,4.16,6/28/1991
+332,328,Super Mario Odyssey,Strategy,9.95,7/18/1996
+333,336,Fortnite,Action,21.03,8/19/1992
+334,352,Grand Theft Auto V,Puzzle,19.42,11/6/2011
+335,28,Red Dead Redemption 2,Role-playing,9.09,4/10/1996
+336,678,The Legend of Zelda: Breath of the Wild,Role-playing,83.85,3/9/2020
+337,296,God of War,Racing,49.08,8/21/2022
+338,992,Fortnite,Puzzle,21.17,7/27/2013
+339,781,Call of Duty: Modern Warfare,Sports,44.21,1/8/2001
+340,245,Red Dead Redemption 2,Adventure,85.81,6/7/2014
+341,834,Minecraft,Simulation,56.78,11/12/2009
+342,451,God of War,Simulation,25.49,10/15/2004
+343,786,The Legend of Zelda: Breath of the Wild,Simulation,72.1,5/7/2017
+344,180,Grand Theft Auto V,Simulation,45.64,6/8/1992
+345,934,Grand Theft Auto V,Role-playing,44.06,7/6/2000
+346,802,God of War,Platformer,12.38,4/28/2007
+347,413,Minecraft,Role-playing,59.02,7/6/2013
+348,291,Super Mario Odyssey,Sports,16.54,2/11/1994
+349,869,Red Dead Redemption 2,Strategy,15.59,2/9/2021
+350,257,Call of Duty: Modern Warfare,Adventure,93.44,6/12/2020
+351,782,Super Mario Odyssey,Sports,74.58,7/29/2002
+352,939,Call of Duty: Modern Warfare,Fighting,47.2,6/4/2018
+353,951,Red Dead Redemption 2,Platformer,17.53,1/9/2006
+354,506,Fortnite,Sports,37.01,4/22/1996
+355,628,Red Dead Redemption 2,Role-playing,66.43,6/6/2021
+356,16,Call of Duty: Modern Warfare,Racing,78.94,3/18/2005
+357,376,Call of Duty: Modern Warfare,Fighting,42.68,7/6/2016
+358,715,Minecraft,Adventure,50.54,4/29/2009
+359,660,God of War,Fighting,12.99,4/13/2014
+360,880,Super Mario Odyssey,Action,27.25,9/30/2000
+361,490,The Legend of Zelda: Breath of the Wild,Sports,29.01,2/4/2016
+362,483,Assassin's Creed Odyssey,Sports,28.65,1/21/1997
+363,99,Minecraft,Platformer,40.49,12/16/1991
+364,311,Minecraft,Puzzle,87.24,12/10/2008
+365,151,Minecraft,Strategy,61.19,5/28/2021
+366,310,Assassin's Creed Odyssey,Role-playing,20.55,6/28/2005
+367,793,Fortnite,Fighting,60.96,6/13/2019
+368,500,Fortnite,Puzzle,94.67,11/20/1994
+369,432,Red Dead Redemption 2,Action,12.84,7/1/1996
+370,86,Grand Theft Auto V,Adventure,69.97,1/31/2019
+371,157,Assassin's Creed Odyssey,Adventure,85.62,5/26/2021
+372,991,God of War,Action,39.81,12/29/1993
+373,714,Super Mario Odyssey,Puzzle,18.15,8/1/2005
+374,593,The Legend of Zelda: Breath of the Wild,Sports,10.28,2/6/1991
+375,672,Call of Duty: Modern Warfare,Sports,65.29,7/19/2004
+376,941,God of War,Sports,27.05,4/9/2005
+377,877,Super Mario Odyssey,Role-playing,55.95,6/3/1997
+378,797,Call of Duty: Modern Warfare,Sports,8.91,4/23/2000
+379,159,Call of Duty: Modern Warfare,Strategy,44.46,5/12/2010
+380,584,Assassin's Creed Odyssey,Puzzle,26.98,5/29/2018
+381,633,Call of Duty: Modern Warfare,Adventure,57.84,1/23/2017
+382,598,God of War,Puzzle,72.58,12/19/1997
+383,962,Call of Duty: Modern Warfare,Racing,10.51,8/14/2016
+384,13,Red Dead Redemption 2,Action,92.01,9/16/2005
+385,838,FIFA 20,Adventure,24.35,10/14/2019
+386,959,The Legend of Zelda: Breath of the Wild,Action,98.29,11/29/1999
+387,348,Call of Duty: Modern Warfare,Racing,10.69,9/9/2001
+388,811,Super Mario Odyssey,Sports,7.02,2/13/2004
+389,583,The Legend of Zelda: Breath of the Wild,Sports,76.12,9/30/2016
+390,732,Red Dead Redemption 2,Role-playing,67.87,4/22/2002
+391,536,Red Dead Redemption 2,Puzzle,7.96,11/22/2010
+392,443,FIFA 20,Action,70.61,5/21/2008
+393,878,Assassin's Creed Odyssey,Sports,81.84,3/23/2019
+394,634,God of War,Action,27.22,4/8/2022
+395,637,Fortnite,Platformer,99.64,7/27/2001
+396,708,FIFA 20,Sports,1.09,2/13/2009
+397,950,Call of Duty: Modern Warfare,Action,0.42,8/19/2010
+398,423,Fortnite,Fighting,31.74,2/17/1997
+399,27,Assassin's Creed Odyssey,Fighting,65.11,6/11/2000
+400,603,Red Dead Redemption 2,Racing,16.91,12/19/2022
+401,840,Red Dead Redemption 2,Role-playing,31.36,1/10/2006
+402,592,Super Mario Odyssey,Action,62.76,9/13/2011
+403,398,Assassin's Creed Odyssey,Strategy,86.78,12/4/2002
+404,852,Fortnite,Strategy,93.61,12/18/2016
+405,743,Grand Theft Auto V,Strategy,16.96,8/2/2014
+406,784,Call of Duty: Modern Warfare,Puzzle,29.15,2/26/2009
+407,189,Grand Theft Auto V,Racing,33.03,6/18/1992
+408,401,Assassin's Creed Odyssey,Simulation,27.1,11/13/2005
+409,307,The Legend of Zelda: Breath of the Wild,Adventure,19.89,10/26/2013
+410,8,FIFA 20,Sports,20.76,4/11/2002
+411,78,Call of Duty: Modern Warfare,Racing,36.16,8/11/2004
+412,227,FIFA 20,Action,39.06,7/13/2011
+413,943,Assassin's Creed Odyssey,Sports,55.1,8/26/2001
+414,298,Red Dead Redemption 2,Fighting,9.0,2/9/2010
+415,501,Grand Theft Auto V,Fighting,97.86,7/2/2011
+416,970,The Legend of Zelda: Breath of the Wild,Sports,15.72,3/9/2011
+417,21,Assassin's Creed Odyssey,Racing,89.7,4/16/1991
+418,580,FIFA 20,Action,31.83,9/30/1995
+419,345,Super Mario Odyssey,Racing,4.9,2/17/1995
+420,239,The Legend of Zelda: Breath of the Wild,Role-playing,81.76,2/2/2022
+421,469,Grand Theft Auto V,Platformer,19.92,4/28/1995
+422,322,Super Mario Odyssey,Simulation,56.38,12/27/2016
+423,520,Minecraft,Action,66.39,2/5/2020
+424,562,Minecraft,Adventure,17.82,9/27/2021
+425,999,Fortnite,Puzzle,92.27,2/1/2008
+426,312,The Legend of Zelda: Breath of the Wild,Role-playing,91.89,2/1/2013
+427,235,The Legend of Zelda: Breath of the Wild,Platformer,45.49,11/1/2007
+428,912,The Legend of Zelda: Breath of the Wild,Sports,60.6,1/14/1992
+429,709,Minecraft,Strategy,26.67,3/5/1997
+430,682,Minecraft,Action,98.83,5/6/2023
+431,803,The Legend of Zelda: Breath of the Wild,Strategy,37.9,2/4/2013
+432,220,Minecraft,Fighting,60.76,9/22/2022
+433,750,Minecraft,Action,82.21,8/1/2016
+434,746,Fortnite,Strategy,38.68,3/18/2020
+435,757,Minecraft,Platformer,14.05,9/9/2014
+436,261,Grand Theft Auto V,Puzzle,75.33,7/29/2002
+437,896,Grand Theft Auto V,Action,83.66,3/9/2012
+438,221,Call of Duty: Modern Warfare,Platformer,95.17,7/28/2021
+439,387,Red Dead Redemption 2,Sports,76.92,3/26/2007
+440,480,Red Dead Redemption 2,Puzzle,72.23,2/24/2023
+441,510,Minecraft,Adventure,36.11,2/16/1999
+442,38,Super Mario Odyssey,Fighting,37.0,8/17/1992
+443,431,Assassin's Creed Odyssey,Puzzle,30.57,8/1/2009
+444,95,Super Mario Odyssey,Fighting,75.04,10/28/2012
+445,794,Super Mario Odyssey,Sports,19.15,12/31/2005
+446,857,FIFA 20,Racing,13.95,6/15/1999
+447,774,Call of Duty: Modern Warfare,Simulation,12.93,10/9/2018
+448,759,Fortnite,Adventure,63.96,4/17/2013
+449,274,Call of Duty: Modern Warfare,Action,72.32,7/29/1997
+450,719,Fortnite,Strategy,0.83,2/20/2018
+451,735,Fortnite,Sports,34.79,10/16/2013
+452,841,Super Mario Odyssey,Simulation,3.24,1/11/2015
+453,685,FIFA 20,Simulation,36.8,6/26/2005
+454,171,FIFA 20,Puzzle,67.39,4/9/1997
+455,714,God of War,Action,18.34,3/13/2000
+456,590,Minecraft,Sports,90.2,2/7/2023
+457,215,Super Mario Odyssey,Simulation,13.91,6/4/2001
+458,663,The Legend of Zelda: Breath of the Wild,Racing,53.14,10/6/2015
+459,976,Super Mario Odyssey,Racing,94.47,9/26/2012
+460,429,The Legend of Zelda: Breath of the Wild,Sports,18.19,2/7/2009
+461,324,Grand Theft Auto V,Fighting,23.0,11/6/2018
+462,580,God of War,Platformer,89.8,10/13/2008
+463,93,Red Dead Redemption 2,Puzzle,98.33,7/24/2003
+464,233,Super Mario Odyssey,Sports,47.48,8/29/2021
+465,506,Grand Theft Auto V,Fighting,76.56,3/21/2021
+466,864,Fortnite,Puzzle,39.62,3/30/2012
+467,979,FIFA 20,Sports,55.11,6/3/1991
+468,178,Super Mario Odyssey,Racing,67.72,12/13/2015
+469,788,Minecraft,Action,56.22,10/27/1998
+470,254,Minecraft,Simulation,16.04,10/11/2008
+471,600,Minecraft,Simulation,7.37,4/25/2017
+472,84,The Legend of Zelda: Breath of the Wild,Puzzle,67.87,6/1/2010
+473,268,Red Dead Redemption 2,Role-playing,16.58,2/20/1996
+474,280,The Legend of Zelda: Breath of the Wild,Simulation,2.4,10/19/2015
+475,726,Red Dead Redemption 2,Fighting,36.15,2/6/2015
+476,507,Call of Duty: Modern Warfare,Platformer,20.3,8/6/2023
+477,919,Grand Theft Auto V,Sports,10.2,2/26/2003
+478,835,Minecraft,Puzzle,32.29,10/13/2020
+479,965,Grand Theft Auto V,Simulation,12.06,7/13/1992
+480,886,Fortnite,Adventure,51.11,12/23/2011
+481,88,Minecraft,Role-playing,8.31,1/22/2004
+482,533,Call of Duty: Modern Warfare,Action,30.37,2/21/2015
+483,623,Assassin's Creed Odyssey,Strategy,3.08,8/19/2020
+484,849,Minecraft,Platformer,57.3,7/22/2014
+485,78,God of War,Sports,28.63,2/16/2003
+486,409,Grand Theft Auto V,Platformer,34.26,9/9/2001
+487,185,Call of Duty: Modern Warfare,Racing,17.35,7/12/2009
+488,76,Minecraft,Simulation,39.02,1/4/2021
+489,716,Assassin's Creed Odyssey,Adventure,34.88,6/27/2019
+490,468,Super Mario Odyssey,Simulation,90.29,9/21/2006
+491,460,Super Mario Odyssey,Simulation,29.31,2/26/2012
+492,778,Minecraft,Fighting,49.59,8/30/2019
+493,601,Minecraft,Puzzle,56.51,9/25/1993
+494,740,Grand Theft Auto V,Puzzle,47.4,7/23/2023
+495,180,FIFA 20,Role-playing,80.34,9/15/2001
+496,859,FIFA 20,Racing,45.35,3/21/2022
+497,23,Grand Theft Auto V,Sports,11.05,7/16/2022
+498,519,Grand Theft Auto V,Racing,84.72,2/19/2008
+499,500,Minecraft,Adventure,83.85,2/3/1999
+500,807,FIFA 20,Strategy,41.7,10/28/1992
+501,364,Red Dead Redemption 2,Strategy,24.42,4/30/1993
+502,937,Call of Duty: Modern Warfare,Racing,91.86,4/26/1997
+503,401,FIFA 20,Adventure,37.36,8/26/2013
+504,8,Call of Duty: Modern Warfare,Role-playing,55.44,5/28/2001
+505,870,Assassin's Creed Odyssey,Action,85.97,5/13/2010
+506,263,Assassin's Creed Odyssey,Strategy,57.99,2/9/2003
+507,623,Red Dead Redemption 2,Platformer,0.77,2/27/1993
+508,847,Grand Theft Auto V,Strategy,90.63,10/13/2000
+509,305,Super Mario Odyssey,Platformer,12.12,8/26/1998
+510,816,Grand Theft Auto V,Fighting,31.42,8/23/2016
+511,263,FIFA 20,Racing,31.85,1/4/1993
+512,798,Red Dead Redemption 2,Platformer,40.57,7/5/1999
+513,9,FIFA 20,Strategy,78.56,9/14/1996
+514,200,Minecraft,Action,94.5,6/12/2005
+515,685,Red Dead Redemption 2,Adventure,21.06,12/20/2021
+516,610,Super Mario Odyssey,Strategy,42.8,4/3/2011
+517,367,Minecraft,Puzzle,80.1,7/1/2010
+518,111,The Legend of Zelda: Breath of the Wild,Strategy,3.54,12/13/2016
+519,295,God of War,Racing,20.7,3/12/1996
+520,937,Call of Duty: Modern Warfare,Simulation,20.46,4/8/2008
+521,830,Minecraft,Strategy,50.52,1/20/1996
+522,943,Call of Duty: Modern Warfare,Simulation,27.35,7/2/1995
+523,425,Grand Theft Auto V,Sports,90.88,7/13/1995
+524,720,Minecraft,Adventure,76.29,10/21/2011
+525,28,Fortnite,Platformer,48.75,4/8/2006
+526,692,The Legend of Zelda: Breath of the Wild,Action,45.88,10/27/2008
+527,520,God of War,Platformer,0.29,1/29/2022
+528,912,Call of Duty: Modern Warfare,Action,56.18,6/24/2007
+529,527,Minecraft,Role-playing,86.53,2/19/2002
+530,238,God of War,Platformer,75.58,12/4/2017
+531,743,Fortnite,Simulation,8.69,2/27/1995
+532,773,FIFA 20,Racing,24.41,5/29/2022
+533,43,Super Mario Odyssey,Sports,30.74,4/18/2018
+534,274,God of War,Sports,78.51,10/23/2013
+535,409,Super Mario Odyssey,Racing,61.94,12/11/1998
+536,893,FIFA 20,Fighting,50.84,9/29/2010
+537,408,Grand Theft Auto V,Platformer,94.19,1/1/2021
+538,351,Call of Duty: Modern Warfare,Fighting,63.52,8/25/2017
+539,837,FIFA 20,Racing,42.86,8/9/2016
+540,30,God of War,Role-playing,6.96,7/23/1995
+541,489,Red Dead Redemption 2,Platformer,42.97,5/8/2005
+542,239,Red Dead Redemption 2,Racing,8.99,5/24/1991
+543,452,Fortnite,Role-playing,9.47,4/20/1991
+544,637,Super Mario Odyssey,Fighting,52.75,10/22/2009
+545,810,FIFA 20,Platformer,24.35,5/16/2013
+546,815,FIFA 20,Adventure,19.24,1/24/2004
+547,736,Assassin's Creed Odyssey,Action,92.97,3/13/2008
+548,48,God of War,Action,31.69,11/3/2006
+549,253,Minecraft,Simulation,47.62,8/23/2001
+550,452,Assassin's Creed Odyssey,Simulation,16.32,7/16/2001
+551,647,Red Dead Redemption 2,Platformer,41.31,2/28/1995
+552,626,Call of Duty: Modern Warfare,Platformer,6.99,6/29/2004
+553,828,The Legend of Zelda: Breath of the Wild,Role-playing,71.03,1/2/2012
+554,489,Super Mario Odyssey,Simulation,61.46,7/5/2009
+555,796,Call of Duty: Modern Warfare,Sports,15.78,8/11/1996
+556,638,Fortnite,Adventure,20.18,11/8/1995
+557,411,Grand Theft Auto V,Racing,55.65,3/17/1994
+558,552,FIFA 20,Adventure,62.34,8/11/2005
+559,902,FIFA 20,Strategy,92.4,1/30/2007
+560,475,God of War,Platformer,14.78,2/19/1998
+561,13,Grand Theft Auto V,Action,25.17,5/10/2011
+562,131,Minecraft,Sports,38.31,7/27/1995
+563,997,Grand Theft Auto V,Adventure,66.49,5/25/2001
+564,726,Call of Duty: Modern Warfare,Fighting,69.98,1/29/1996
+565,599,Grand Theft Auto V,Simulation,74.84,5/8/1993
+566,694,Red Dead Redemption 2,Fighting,21.23,11/13/2012
+567,867,Assassin's Creed Odyssey,Action,77.19,8/4/2016
+568,745,Red Dead Redemption 2,Platformer,43.31,7/24/1991
+569,720,Minecraft,Platformer,33.8,12/26/1992
+570,285,Assassin's Creed Odyssey,Strategy,23.41,8/8/2001
+571,701,FIFA 20,Sports,39.95,12/17/2020
+572,839,Super Mario Odyssey,Racing,90.39,3/3/2004
+573,149,The Legend of Zelda: Breath of the Wild,Adventure,14.09,5/20/2018
+574,30,Super Mario Odyssey,Fighting,18.49,4/10/1991
+575,367,Assassin's Creed Odyssey,Fighting,71.58,12/7/2000
+576,477,Call of Duty: Modern Warfare,Fighting,55.31,7/17/2004
+577,274,Minecraft,Puzzle,90.54,8/3/2003
+578,621,Minecraft,Sports,8.98,7/14/1997
+579,265,Fortnite,Platformer,62.52,7/12/1993
+580,136,Grand Theft Auto V,Action,91.51,10/19/2008
+581,512,Grand Theft Auto V,Role-playing,31.81,6/10/2014
+582,473,Red Dead Redemption 2,Racing,98.7,11/21/2000
+583,921,FIFA 20,Fighting,29.29,10/5/2006
+584,246,The Legend of Zelda: Breath of the Wild,Platformer,5.96,4/20/1997
+585,96,Minecraft,Action,91.14,3/1/2021
+586,230,FIFA 20,Sports,99.79,6/17/2013
+587,349,Assassin's Creed Odyssey,Platformer,90.92,11/30/2000
+588,431,Grand Theft Auto V,Puzzle,3.82,8/1/2013
+589,94,Super Mario Odyssey,Adventure,37.43,3/10/2022
+590,332,Minecraft,Simulation,16.65,1/11/2022
+591,419,God of War,Action,20.75,8/31/2003
+592,768,FIFA 20,Simulation,82.03,2/25/2013
+593,527,The Legend of Zelda: Breath of the Wild,Strategy,51.15,9/6/2010
+594,194,Fortnite,Strategy,62.89,9/9/2016
+595,884,FIFA 20,Puzzle,68.82,6/17/2015
+596,983,Assassin's Creed Odyssey,Role-playing,50.93,1/13/2000
+597,378,Minecraft,Simulation,99.18,5/15/2008
+598,913,Grand Theft Auto V,Strategy,15.91,7/17/1998
+599,233,Minecraft,Puzzle,84.2,12/21/2003
+600,881,Minecraft,Racing,88.16,7/24/2005
+601,548,Minecraft,Adventure,92.03,7/7/1993
+602,941,The Legend of Zelda: Breath of the Wild,Platformer,82.35,6/9/1992
+603,363,Minecraft,Puzzle,3.98,8/11/1991
+604,4,FIFA 20,Simulation,35.33,6/2/1995
+605,180,Call of Duty: Modern Warfare,Sports,61.95,8/23/2006
+606,275,Minecraft,Platformer,74.01,12/25/1997
+607,465,Super Mario Odyssey,Adventure,0.98,6/21/2016
+608,529,FIFA 20,Fighting,88.95,6/23/2022
+609,891,God of War,Action,11.1,2/12/2006
+610,286,FIFA 20,Adventure,40.94,3/19/2008
+611,719,Fortnite,Platformer,39.86,10/24/2015
+612,802,Call of Duty: Modern Warfare,Platformer,77.95,11/17/2008
+613,430,God of War,Simulation,42.13,5/25/2023
+614,836,Fortnite,Simulation,71.0,7/28/2017
+615,281,Minecraft,Racing,2.86,5/9/2015
+616,947,Minecraft,Action,20.87,12/11/2006
+617,295,Super Mario Odyssey,Simulation,77.25,11/18/2003
+618,302,God of War,Action,98.46,3/24/1995
+619,715,God of War,Strategy,94.48,10/4/1992
+620,185,Call of Duty: Modern Warfare,Adventure,45.29,5/30/2011
+621,361,Call of Duty: Modern Warfare,Racing,49.36,12/11/1993
+622,805,Grand Theft Auto V,Sports,52.91,11/25/1993
+623,339,FIFA 20,Adventure,7.35,8/29/2004
+624,90,FIFA 20,Sports,97.15,12/22/2022
+625,337,FIFA 20,Simulation,17.85,3/11/2000
+626,498,Call of Duty: Modern Warfare,Puzzle,83.54,11/29/2019
+627,6,The Legend of Zelda: Breath of the Wild,Simulation,31.69,8/29/1994
+628,933,Red Dead Redemption 2,Platformer,58.81,1/4/2016
+629,135,God of War,Role-playing,32.62,3/7/2010
+630,349,Grand Theft Auto V,Action,61.1,11/23/2019
+631,706,God of War,Simulation,96.74,4/30/2012
+632,286,Super Mario Odyssey,Role-playing,41.83,1/31/2000
+633,382,FIFA 20,Simulation,42.45,10/30/1997
+634,767,Super Mario Odyssey,Fighting,90.84,5/28/2005
+635,99,God of War,Adventure,38.98,4/14/2020
+636,785,FIFA 20,Platformer,14.74,1/31/2006
+637,882,Red Dead Redemption 2,Adventure,35.64,9/12/2005
+638,316,The Legend of Zelda: Breath of the Wild,Sports,99.07,7/15/2016
+639,735,Grand Theft Auto V,Sports,80.12,7/21/1991
+640,743,God of War,Adventure,30.62,3/4/2017
+641,653,Minecraft,Sports,74.12,11/18/2013
+642,664,Super Mario Odyssey,Fighting,21.61,7/3/2006
+643,575,Fortnite,Fighting,73.88,4/12/1995
+644,401,FIFA 20,Racing,51.48,1/30/2003
+645,793,Fortnite,Adventure,43.17,3/17/2023
+646,473,The Legend of Zelda: Breath of the Wild,Simulation,46.04,9/23/2022
+647,383,Minecraft,Fighting,95.41,1/12/2022
+648,556,God of War,Sports,0.14,1/4/2005
+649,715,God of War,Strategy,16.5,7/17/2020
+650,988,Minecraft,Role-playing,8.58,4/25/1992
+651,926,The Legend of Zelda: Breath of the Wild,Simulation,78.09,11/17/2010
+652,88,God of War,Sports,89.57,10/1/1994
+653,360,FIFA 20,Adventure,21.39,9/23/1999
+654,381,Assassin's Creed Odyssey,Strategy,61.57,7/31/2012
+655,353,Call of Duty: Modern Warfare,Platformer,82.55,1/3/1997
+656,377,Grand Theft Auto V,Platformer,2.4,7/2/2015
+657,445,Assassin's Creed Odyssey,Fighting,80.76,6/1/2004
+658,65,Grand Theft Auto V,Simulation,71.84,1/9/2003
+659,767,Fortnite,Puzzle,47.34,2/11/1991
+660,630,Red Dead Redemption 2,Platformer,55.85,12/10/1998
+661,138,Assassin's Creed Odyssey,Strategy,13.99,6/30/2010
+662,491,Red Dead Redemption 2,Fighting,96.49,11/2/1999
+663,365,Super Mario Odyssey,Role-playing,79.09,6/10/2013
+664,151,God of War,Role-playing,1.39,1/30/2022
+665,440,The Legend of Zelda: Breath of the Wild,Role-playing,54.82,4/17/1993
+666,387,Fortnite,Role-playing,10.89,11/30/2014
+667,243,Super Mario Odyssey,Adventure,60.45,1/20/1993
+668,434,Call of Duty: Modern Warfare,Adventure,90.62,7/25/2014
+669,35,FIFA 20,Sports,38.45,2/2/2019
+670,739,Red Dead Redemption 2,Sports,93.93,9/7/2023
+671,260,Fortnite,Simulation,66.78,5/6/2013
+672,846,FIFA 20,Action,96.39,8/7/2022
+673,976,Super Mario Odyssey,Racing,93.12,3/26/2000
+674,323,The Legend of Zelda: Breath of the Wild,Puzzle,16.84,3/4/2003
+675,420,Call of Duty: Modern Warfare,Sports,70.96,11/3/2012
+676,628,Grand Theft Auto V,Racing,99.46,9/24/2001
+677,441,God of War,Role-playing,0.19,1/28/2005
+678,868,Assassin's Creed Odyssey,Racing,30.29,4/23/2020
+679,634,God of War,Simulation,73.0,7/15/2010
+680,986,FIFA 20,Strategy,63.8,2/18/1996
+681,955,Call of Duty: Modern Warfare,Fighting,47.19,4/20/2019
+682,379,Super Mario Odyssey,Action,12.14,8/26/1993
+683,595,Call of Duty: Modern Warfare,Role-playing,75.15,2/9/1994
+684,195,Red Dead Redemption 2,Puzzle,34.35,6/26/2015
+685,929,The Legend of Zelda: Breath of the Wild,Racing,80.82,1/27/2006
+686,583,Grand Theft Auto V,Racing,92.85,2/26/2017
+687,819,God of War,Action,46.31,10/30/2018
+688,826,Red Dead Redemption 2,Fighting,51.89,6/27/2011
+689,1000,FIFA 20,Racing,96.31,11/22/1992
+690,997,FIFA 20,Adventure,79.48,4/17/1993
+691,171,Red Dead Redemption 2,Fighting,93.25,1/26/2012
+692,854,The Legend of Zelda: Breath of the Wild,Fighting,23.84,1/11/2018
+693,810,FIFA 20,Role-playing,13.13,12/25/2017
+694,391,Call of Duty: Modern Warfare,Role-playing,81.15,5/28/1999
+695,39,Assassin's Creed Odyssey,Fighting,70.83,3/2/2020
+696,663,Red Dead Redemption 2,Puzzle,61.15,12/13/2002
+697,508,FIFA 20,Role-playing,7.58,8/28/2017
+698,424,Call of Duty: Modern Warfare,Racing,6.0,9/8/2008
+699,286,FIFA 20,Strategy,56.82,12/12/2013
+700,49,Minecraft,Action,32.87,10/19/1999
+701,603,Super Mario Odyssey,Platformer,97.01,6/30/2002
+702,958,Fortnite,Racing,62.71,11/18/2021
+703,763,Super Mario Odyssey,Puzzle,87.86,5/25/2006
+704,843,FIFA 20,Adventure,46.05,8/27/1996
+705,187,Grand Theft Auto V,Fighting,74.46,10/29/2015
+706,284,Fortnite,Role-playing,55.29,9/4/2008
+707,176,Super Mario Odyssey,Racing,0.41,5/11/2023
+708,316,Minecraft,Sports,22.16,3/19/2018
+709,533,God of War,Racing,2.46,5/18/2014
+710,697,Super Mario Odyssey,Action,78.67,5/4/1993
+711,764,Red Dead Redemption 2,Role-playing,5.7,4/27/2019
+712,573,The Legend of Zelda: Breath of the Wild,Sports,90.02,12/23/2021
+713,152,God of War,Racing,46.1,4/29/2013
+714,685,Minecraft,Adventure,99.36,4/7/2007
+715,893,Super Mario Odyssey,Puzzle,11.83,10/1/2005
+716,702,Grand Theft Auto V,Strategy,77.64,6/29/2019
+717,843,Super Mario Odyssey,Platformer,87.05,11/19/2003
+718,91,Red Dead Redemption 2,Platformer,44.83,11/9/2022
+719,498,Red Dead Redemption 2,Fighting,14.26,12/7/2019
+720,25,Fortnite,Sports,55.65,1/15/2010
+721,332,God of War,Action,37.78,4/1/2021
+722,285,Grand Theft Auto V,Role-playing,17.9,5/20/2008
+723,620,FIFA 20,Sports,84.68,2/10/2012
+724,38,Super Mario Odyssey,Action,27.87,6/21/2010
+725,741,Grand Theft Auto V,Platformer,56.28,6/8/2023
+726,277,Super Mario Odyssey,Simulation,32.38,5/25/2020
+727,543,Assassin's Creed Odyssey,Sports,62.96,6/20/1994
+728,675,Assassin's Creed Odyssey,Puzzle,7.82,1/28/2016
+729,494,Call of Duty: Modern Warfare,Action,6.55,2/23/2020
+730,398,Super Mario Odyssey,Sports,59.42,11/7/1999
+731,779,The Legend of Zelda: Breath of the Wild,Platformer,39.65,10/27/2005
+732,586,Minecraft,Simulation,48.31,3/9/2000
+733,323,Red Dead Redemption 2,Sports,1.97,5/22/1997
+734,969,God of War,Racing,12.19,12/27/2011
+735,400,Minecraft,Puzzle,81.5,10/12/2012
+736,167,God of War,Puzzle,76.48,7/25/2015
+737,992,Call of Duty: Modern Warfare,Role-playing,83.7,7/17/2013
+738,461,Super Mario Odyssey,Puzzle,15.84,2/29/2012
+739,252,Assassin's Creed Odyssey,Strategy,81.16,6/2/2016
+740,938,Fortnite,Adventure,7.18,4/8/2015
+741,337,Fortnite,Platformer,63.72,11/18/2004
+742,887,FIFA 20,Strategy,0.02,2/17/1999
+743,967,FIFA 20,Simulation,84.29,5/1/1993
+744,309,Super Mario Odyssey,Adventure,83.47,10/14/2018
+745,275,Red Dead Redemption 2,Racing,66.2,9/6/2018
+746,950,Assassin's Creed Odyssey,Puzzle,69.01,4/11/2014
+747,810,Fortnite,Platformer,12.09,4/15/2017
+748,897,God of War,Racing,90.7,2/1/1993
+749,990,Fortnite,Sports,49.2,11/6/2015
+750,55,Minecraft,Role-playing,52.21,4/30/1994
+751,458,Minecraft,Racing,1.46,6/3/1993
+752,843,Red Dead Redemption 2,Puzzle,60.78,1/31/2015
+753,919,Call of Duty: Modern Warfare,Platformer,30.76,4/28/2010
+754,592,Call of Duty: Modern Warfare,Platformer,97.03,6/13/2001
+755,740,The Legend of Zelda: Breath of the Wild,Sports,98.17,4/30/2002
+756,927,Call of Duty: Modern Warfare,Simulation,65.26,10/20/2015
+757,633,Call of Duty: Modern Warfare,Platformer,79.47,11/3/2013
+758,192,Minecraft,Adventure,58.98,10/2/1991
+759,882,Assassin's Creed Odyssey,Simulation,2.21,10/2/1993
+760,605,Red Dead Redemption 2,Platformer,13.72,9/30/1992
+761,475,FIFA 20,Adventure,29.95,6/9/1995
+762,792,Red Dead Redemption 2,Platformer,39.95,3/15/2011
+763,448,FIFA 20,Simulation,20.03,9/30/2019
+764,790,Minecraft,Strategy,63.75,7/6/1998
+765,931,Assassin's Creed Odyssey,Puzzle,33.49,2/1/1995
+766,712,God of War,Role-playing,19.96,6/2/2015
+767,722,Fortnite,Simulation,45.25,4/24/2002
+768,340,Red Dead Redemption 2,Fighting,46.46,1/13/2023
+769,663,Assassin's Creed Odyssey,Action,80.71,7/24/2021
+770,216,God of War,Role-playing,1.4,3/4/1994
+771,476,Grand Theft Auto V,Adventure,52.15,1/20/2001
+772,783,Super Mario Odyssey,Sports,17.99,12/20/2015
+773,158,Minecraft,Simulation,27.55,2/23/2015
+774,247,Grand Theft Auto V,Simulation,72.25,12/22/2018
+775,757,Fortnite,Puzzle,46.63,10/14/2020
+776,500,The Legend of Zelda: Breath of the Wild,Puzzle,25.63,8/15/2016
+777,305,FIFA 20,Simulation,56.82,10/1/2004
+778,763,Minecraft,Action,24.4,8/5/2023
+779,495,FIFA 20,Fighting,77.54,3/3/2004
+780,440,The Legend of Zelda: Breath of the Wild,Racing,38.7,10/16/1992
+781,666,God of War,Strategy,23.14,7/15/1993
+782,189,Red Dead Redemption 2,Role-playing,44.31,10/8/1998
+783,80,Grand Theft Auto V,Racing,36.4,5/14/2011
+784,276,God of War,Adventure,86.93,12/5/2000
+785,495,Fortnite,Strategy,75.98,1/10/2023
+786,93,Minecraft,Strategy,57.36,9/9/2023
+787,250,The Legend of Zelda: Breath of the Wild,Adventure,87.57,2/23/1993
+788,541,God of War,Racing,41.43,11/9/2004
+789,235,Grand Theft Auto V,Action,31.18,9/26/2020
+790,174,Assassin's Creed Odyssey,Fighting,9.53,9/23/2015
+791,624,Assassin's Creed Odyssey,Strategy,50.0,4/8/2007
+792,900,Super Mario Odyssey,Puzzle,85.11,4/17/1999
+793,75,Super Mario Odyssey,Racing,41.05,10/1/2004
+794,123,God of War,Sports,15.39,10/7/2017
+795,683,Super Mario Odyssey,Racing,34.36,4/14/2013
+796,499,Minecraft,Adventure,50.29,7/16/2017
+797,870,Fortnite,Racing,78.01,4/8/1998
+798,179,Fortnite,Puzzle,20.17,4/23/2010
+799,583,Assassin's Creed Odyssey,Sports,2.93,4/26/2013
+800,93,FIFA 20,Role-playing,5.0,6/18/2020
+801,508,Grand Theft Auto V,Simulation,33.3,10/29/2004
+802,261,FIFA 20,Puzzle,42.33,8/12/2006
+803,850,Minecraft,Platformer,55.26,8/3/2009
+804,983,Fortnite,Platformer,54.46,3/19/2011
+805,401,Red Dead Redemption 2,Action,94.51,4/22/1997
+806,3,God of War,Puzzle,57.75,2/14/2011
+807,971,Call of Duty: Modern Warfare,Racing,95.86,12/1/1998
+808,323,FIFA 20,Role-playing,53.77,12/19/1997
+809,363,Grand Theft Auto V,Simulation,15.94,5/10/2010
+810,180,The Legend of Zelda: Breath of the Wild,Role-playing,42.28,4/5/2011
+811,814,God of War,Role-playing,6.25,7/3/2013
+812,473,Minecraft,Sports,59.05,6/22/2001
+813,790,Grand Theft Auto V,Simulation,55.14,2/25/2001
+814,750,Fortnite,Fighting,30.09,9/2/2004
+815,619,The Legend of Zelda: Breath of the Wild,Sports,52.9,7/12/2001
+816,462,Fortnite,Strategy,69.16,5/19/2023
+817,956,Minecraft,Platformer,56.89,6/17/2006
+818,201,Fortnite,Role-playing,56.64,7/28/2007
+819,684,Grand Theft Auto V,Platformer,94.88,10/11/2014
+820,117,The Legend of Zelda: Breath of the Wild,Simulation,11.73,1/4/2021
+821,418,God of War,Racing,90.55,5/22/2010
+822,274,Fortnite,Racing,48.2,8/8/1996
+823,40,Assassin's Creed Odyssey,Racing,11.87,5/14/2013
+824,444,FIFA 20,Platformer,59.3,1/7/2006
+825,719,Red Dead Redemption 2,Platformer,47.24,12/27/2021
+826,174,Minecraft,Simulation,48.93,7/18/2003
+827,376,Minecraft,Action,99.89,5/16/2016
+828,277,FIFA 20,Action,68.56,1/30/2023
+829,555,The Legend of Zelda: Breath of the Wild,Role-playing,69.87,8/30/2011
+830,153,Minecraft,Platformer,83.62,6/28/2005
+831,347,God of War,Platformer,23.1,7/9/2001
+832,652,Super Mario Odyssey,Simulation,22.06,2/12/1995
+833,184,Red Dead Redemption 2,Role-playing,71.26,12/10/2018
+834,697,Assassin's Creed Odyssey,Fighting,48.82,6/7/2021
+835,924,Assassin's Creed Odyssey,Puzzle,37.4,12/28/2008
+836,286,God of War,Action,30.99,9/20/2009
+837,515,Red Dead Redemption 2,Adventure,41.93,10/28/2023
+838,787,Fortnite,Action,34.08,2/7/2015
+839,123,Assassin's Creed Odyssey,Action,47.28,12/19/2005
+840,213,Grand Theft Auto V,Puzzle,16.61,4/28/2018
+841,54,Fortnite,Fighting,5.37,1/30/2020
+842,835,Super Mario Odyssey,Platformer,54.03,5/9/2021
+843,299,Call of Duty: Modern Warfare,Simulation,47.71,3/18/2006
+844,449,FIFA 20,Adventure,49.79,12/2/2005
+845,993,Super Mario Odyssey,Sports,75.66,3/25/1998
+846,227,Super Mario Odyssey,Sports,17.48,10/30/2003
+847,527,Super Mario Odyssey,Racing,13.67,6/9/1995
+848,394,Assassin's Creed Odyssey,Strategy,55.97,10/25/1999
+849,898,Assassin's Creed Odyssey,Racing,41.83,7/8/2004
+850,519,Assassin's Creed Odyssey,Fighting,7.27,11/11/1993
+851,573,Minecraft,Action,38.67,6/1/2009
+852,441,Grand Theft Auto V,Action,74.8,1/2/1991
+853,941,God of War,Strategy,49.5,6/29/1992
+854,977,FIFA 20,Platformer,84.97,2/9/2014
+855,585,Minecraft,Action,83.26,8/21/2005
+856,400,Super Mario Odyssey,Action,53.63,8/25/1999
+857,395,Call of Duty: Modern Warfare,Platformer,29.59,7/9/2019
+858,232,FIFA 20,Platformer,5.49,9/3/2011
+859,278,Super Mario Odyssey,Simulation,24.06,4/30/1995
+860,692,Call of Duty: Modern Warfare,Adventure,55.58,11/1/2020
+861,912,FIFA 20,Adventure,71.74,2/23/2000
+862,619,Fortnite,Racing,0.88,3/24/2002
+863,643,Call of Duty: Modern Warfare,Platformer,16.83,3/20/2015
+864,774,The Legend of Zelda: Breath of the Wild,Platformer,17.53,11/4/2023
+865,252,The Legend of Zelda: Breath of the Wild,Adventure,10.19,8/20/2001
+866,651,Fortnite,Simulation,78.29,10/3/2006
+867,44,Minecraft,Platformer,55.83,7/19/1997
+868,581,Super Mario Odyssey,Platformer,86.1,1/30/1996
+869,625,Grand Theft Auto V,Racing,47.86,7/2/1998
+870,345,God of War,Role-playing,68.74,7/22/2021
+871,294,Red Dead Redemption 2,Simulation,56.61,4/3/1991
+872,182,Call of Duty: Modern Warfare,Sports,26.14,10/4/2003
+873,187,Fortnite,Strategy,64.55,12/24/1997
+874,668,The Legend of Zelda: Breath of the Wild,Racing,46.23,4/21/2016
+875,512,Fortnite,Adventure,79.07,6/15/2020
+876,981,Minecraft,Platformer,96.57,9/29/2008
+877,974,Assassin's Creed Odyssey,Platformer,74.01,9/17/2007
+878,477,Call of Duty: Modern Warfare,Strategy,85.27,6/20/2009
+879,43,Super Mario Odyssey,Simulation,43.96,8/2/2008
+880,172,Minecraft,Role-playing,33.04,7/1/1999
+881,281,Super Mario Odyssey,Role-playing,41.45,10/8/1999
+882,920,FIFA 20,Strategy,86.87,10/7/2013
+883,267,Grand Theft Auto V,Puzzle,61.63,1/4/2000
+884,261,Grand Theft Auto V,Sports,27.62,8/3/2004
+885,695,Super Mario Odyssey,Platformer,35.38,3/9/2010
+886,61,Super Mario Odyssey,Puzzle,84.4,4/14/2012
+887,869,Grand Theft Auto V,Simulation,8.63,9/17/1998
+888,360,FIFA 20,Action,23.62,4/18/1999
+889,856,Call of Duty: Modern Warfare,Adventure,67.6,10/6/2007
+890,552,Grand Theft Auto V,Action,24.53,8/3/1997
+891,529,Grand Theft Auto V,Strategy,8.58,12/9/2000
+892,291,Super Mario Odyssey,Platformer,63.63,8/17/2021
+893,86,FIFA 20,Simulation,40.91,12/23/2021
+894,655,God of War,Simulation,19.6,9/3/2003
+895,421,FIFA 20,Strategy,45.55,1/15/1994
+896,16,Red Dead Redemption 2,Action,61.29,8/22/2013
+897,829,Minecraft,Role-playing,86.53,12/9/2018
+898,357,Minecraft,Simulation,78.42,7/13/1996
+899,303,Super Mario Odyssey,Fighting,73.01,12/11/2009
+900,399,FIFA 20,Simulation,40.8,11/12/2004
+901,778,Grand Theft Auto V,Sports,74.75,12/10/2008
+902,508,FIFA 20,Racing,67.96,5/29/1993
+903,727,Red Dead Redemption 2,Puzzle,48.63,8/31/1997
+904,174,Assassin's Creed Odyssey,Platformer,86.29,3/25/2010
+905,691,The Legend of Zelda: Breath of the Wild,Puzzle,32.39,3/17/2019
+906,282,FIFA 20,Adventure,97.45,4/18/2018
+907,908,Grand Theft Auto V,Platformer,5.06,2/21/2022
+908,527,FIFA 20,Role-playing,78.76,8/17/2009
+909,623,Red Dead Redemption 2,Adventure,74.01,9/4/2022
+910,426,Super Mario Odyssey,Strategy,37.52,9/29/2012
+911,317,FIFA 20,Puzzle,60.49,9/29/1996
+912,879,Grand Theft Auto V,Simulation,60.13,6/16/2001
+913,239,Grand Theft Auto V,Adventure,42.43,3/28/2022
+914,795,Minecraft,Platformer,76.18,10/26/1999
+915,117,Minecraft,Puzzle,69.46,7/27/2009
+916,249,Super Mario Odyssey,Strategy,77.92,5/30/2018
+917,459,Red Dead Redemption 2,Platformer,6.78,8/15/2016
+918,534,Grand Theft Auto V,Action,39.46,4/29/1991
+919,102,Fortnite,Adventure,2.98,3/5/2010
+920,325,Grand Theft Auto V,Role-playing,16.85,10/20/2019
+921,682,God of War,Adventure,71.1,3/17/2018
+922,422,Red Dead Redemption 2,Fighting,9.86,1/9/2012
+923,177,God of War,Racing,0.75,12/30/2000
+924,394,Fortnite,Adventure,81.68,6/8/2010
+925,752,Call of Duty: Modern Warfare,Strategy,40.63,11/30/1995
+926,778,Fortnite,Strategy,47.78,4/29/2001
+927,7,Fortnite,Action,26.02,8/10/1998
+928,569,Grand Theft Auto V,Sports,51.59,4/24/2009
+929,917,Call of Duty: Modern Warfare,Simulation,67.49,8/5/1995
+930,390,God of War,Action,35.47,3/20/1993
+931,439,God of War,Fighting,69.06,11/12/2016
+932,485,FIFA 20,Puzzle,77.74,6/20/2017
+933,361,Fortnite,Puzzle,85.3,6/6/1994
+934,765,The Legend of Zelda: Breath of the Wild,Role-playing,97.52,9/5/1997
+935,228,Call of Duty: Modern Warfare,Adventure,41.96,2/23/2022
+936,91,FIFA 20,Role-playing,2.28,2/6/2021
+937,663,Super Mario Odyssey,Role-playing,50.74,8/14/1991
+938,444,Assassin's Creed Odyssey,Racing,94.9,8/8/2021
+939,260,FIFA 20,Action,85.3,7/14/2020
+940,147,Super Mario Odyssey,Sports,22.2,2/9/1994
+941,299,FIFA 20,Sports,6.34,11/29/2003
+942,744,The Legend of Zelda: Breath of the Wild,Strategy,95.86,4/25/2016
+943,894,FIFA 20,Puzzle,60.96,4/7/1993
+944,733,Minecraft,Role-playing,0.42,8/11/2018
+945,305,Super Mario Odyssey,Racing,21.66,7/15/2014
+946,956,Call of Duty: Modern Warfare,Racing,84.14,10/8/2008
+947,844,FIFA 20,Racing,13.23,1/20/2021
+948,138,Call of Duty: Modern Warfare,Simulation,32.35,2/23/1997
+949,120,God of War,Puzzle,52.68,10/11/2001
+950,240,Assassin's Creed Odyssey,Racing,8.46,7/25/2004
+951,409,Red Dead Redemption 2,Puzzle,29.09,11/19/2014
+952,823,The Legend of Zelda: Breath of the Wild,Fighting,3.05,2/14/2016
+953,827,Minecraft,Role-playing,65.75,11/21/2007
+954,378,Red Dead Redemption 2,Role-playing,63.13,5/29/2013
+955,989,Grand Theft Auto V,Sports,40.23,6/22/2003
+956,741,Fortnite,Racing,80.6,3/28/1995
+957,535,Grand Theft Auto V,Fighting,85.46,3/30/2023
+958,800,God of War,Puzzle,26.8,11/27/1993
+959,200,Call of Duty: Modern Warfare,Action,98.23,6/19/2008
+960,15,The Legend of Zelda: Breath of the Wild,Action,11.29,5/26/2020
+961,22,The Legend of Zelda: Breath of the Wild,Sports,29.69,8/14/2009
+962,321,The Legend of Zelda: Breath of the Wild,Simulation,58.48,6/19/2020
+963,972,Minecraft,Strategy,59.82,4/30/1999
+964,685,Super Mario Odyssey,Puzzle,41.19,5/16/2010
+965,925,Call of Duty: Modern Warfare,Action,1.96,11/27/2017
+966,174,God of War,Adventure,53.63,12/28/1995
+967,267,Grand Theft Auto V,Action,31.68,1/30/2013
+968,681,Red Dead Redemption 2,Platformer,40.75,12/2/1996
+969,219,Assassin's Creed Odyssey,Sports,32.79,3/14/1993
+970,188,FIFA 20,Action,12.97,3/4/1995
+971,297,Call of Duty: Modern Warfare,Simulation,85.9,7/25/2020
+972,284,Super Mario Odyssey,Adventure,48.31,12/1/2007
+973,999,Red Dead Redemption 2,Strategy,32.27,4/26/2004
+974,601,Grand Theft Auto V,Sports,84.71,4/6/2009
+975,405,Super Mario Odyssey,Simulation,18.35,6/18/1999
+976,192,Assassin's Creed Odyssey,Sports,18.99,8/25/1996
+977,749,Minecraft,Action,55.07,8/30/1999
+978,11,Assassin's Creed Odyssey,Role-playing,71.57,5/24/2000
+979,811,FIFA 20,Platformer,92.63,1/23/2015
+980,823,Call of Duty: Modern Warfare,Puzzle,3.55,9/10/1998
+981,437,Red Dead Redemption 2,Sports,69.15,10/25/2010
+982,42,Assassin's Creed Odyssey,Sports,95.35,4/17/2015
+983,957,Red Dead Redemption 2,Fighting,32.62,8/6/2009
+984,779,The Legend of Zelda: Breath of the Wild,Simulation,9.11,1/23/2004
+985,737,Assassin's Creed Odyssey,Role-playing,12.2,9/3/2016
+986,375,God of War,Sports,62.68,4/8/1997
+987,737,FIFA 20,Adventure,86.12,10/24/1996
+988,334,Minecraft,Fighting,21.0,9/13/2011
+989,83,Fortnite,Racing,87.25,10/3/2014
+990,969,Grand Theft Auto V,Adventure,43.38,12/7/2020
+991,362,Fortnite,Fighting,32.51,6/13/2016
+992,767,Super Mario Odyssey,Adventure,73.22,10/28/2020
+993,904,The Legend of Zelda: Breath of the Wild,Simulation,81.9,10/11/2016
+994,354,Call of Duty: Modern Warfare,Action,99.48,12/13/2007
+995,437,Minecraft,Adventure,54.48,8/16/2015
+996,394,Call of Duty: Modern Warfare,Role-playing,47.72,9/20/2016
+997,594,Grand Theft Auto V,Puzzle,30.35,11/10/1995
+998,171,God of War,Puzzle,60.34,5/24/1996
+999,795,Minecraft,Puzzle,47.06,8/22/1998
+1000,929,Minecraft,Strategy,92.44,6/27/2003
