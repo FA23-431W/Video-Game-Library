@@ -1,0 +1,6 @@
+print("\n----------- User Menu -----------")
+print("1. See My Wishlist")
+print("2. Game Library")
+print("3. Quit")
+print("----------- User Menu ------------")
+choice = input("Enter your choice: ")

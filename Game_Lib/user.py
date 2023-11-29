@@ -1,30 +1,30 @@
 import sqlite3
+from Game_Lib.game_lib import *
+from wishlist import *
 
 
-def login(conn, name, password):
-    """
-    Login function to authenticate a user.
-    :param conn: Database connection object
-    :param username: The username of the user
-    :param password: The password of the user
-    :return: True if login is successful, False otherwise
-    """
-    cur = conn.cursor()
 
-    try:
-        # Prepare a query to select the user
-        query = "SELECT * FROM User WHERE name=? AND password=?"
-        cur.execute(query, (name, password))
 
-        # Fetch one record, if user exists
-        user = cur.fetchone()
-        if user:
-            return True
+def user_menu(conn, user_id):
+    while True:
+        print("\n----------- User Menu -----------")
+        print("1. See My Wishlist")
+        print("2. Game Library")
+        print("3. Logout")
+        print("----------- User Menu ------------")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            wishlist_menu(conn, user_id)
+        elif choice == "2":
+            game_library_menu(conn, user_id)
+        elif choice == "3":
+            print("Logout")
+            break
         else:
-            return False
-    except sqlite3.Error as e:
-        print(f"An error occurred: {e}")
-        return False
-def user_menu():
+            print("Invalid choice. Please try again.")
 
-    pass
+
+if __name__ == '__main__':
+    conn = sqlite3.connect("Data/data.db")
+    user_menu(conn, 865)

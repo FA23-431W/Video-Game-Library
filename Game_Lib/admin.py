@@ -1,4 +1,4 @@
 
 
-def admin_menu():
+def admin_menu(conn,name):
     pass
