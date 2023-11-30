@@ -1,13 +1,13 @@
 import sqlite3
 from admin import admin_menu
 
-def view_menu(conn, user_id):
+def delete_menu(conn, user_id):
   while True:
     print("\n----------- Delete Menu -----------")
     print("1. Delete specific element")
     print("2. Delete table")
     print("3. Return")
-    print("----------- View Menu ------------")
+    print("----------- Delete Menu ------------")
     choice = input("Enter your choice: ")
 
     if choice == "1":
