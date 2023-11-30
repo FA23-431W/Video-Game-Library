@@ -2,6 +2,8 @@ import sqlite3
 from Game_Lib.game_lib import *
 from view import view_menu
 from insert import insert_menu
+from delete import delete_menu
+from update import update_menu
 
 def admin_menu(conn, user_id):
     while True:
