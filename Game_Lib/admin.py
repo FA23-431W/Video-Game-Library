@@ -1,5 +1,7 @@
 import sqlite3
 from Game_Lib.game_lib import *
+from view import view_menu
+from insert import insert_menu
 
 def admin_menu(conn, user_id):
     while True:
@@ -13,7 +15,7 @@ def admin_menu(conn, user_id):
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            game_library_menu(conn, user_id)
+            view_menu(conn, user_id)
         elif choice == "2":
             insert_menu(conn, user_id)
         elif choice == "3":
