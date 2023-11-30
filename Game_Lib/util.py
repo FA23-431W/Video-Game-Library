@@ -14,11 +14,107 @@ def display_game_list(game_info):
         print("Your wishlist is empty.")
 
 
-def goto_community():
-    pass
+# This function leads user to the community page,
+# where user can browse the review under certain game
+# and also add comments to the dashborad
+
+def fetch_posts(conn, game_id):
+    """
+    Fetch and display dashboard posts for a specific game.
+
+    :param conn: Database connection object
+    :param game_id: The ID of the game
+    """
+
+    # TYPO in Community!
+    try:
+        cur = conn.cursor()
+        query = """
+        SELECT d.post, d.date, d.Author
+        FROM Dashboard d
+        JOIN Commuinty c ON d.dashboardID = c.dashboardID
+        WHERE c.gameID = ?
+        ORDER BY d.date DESC
+        """
+        cur.execute(query, (game_id,))
+        posts = cur.fetchall()
+
+        if posts:
+            print("\n--- Game Community Dashboard ---")
+            for post in posts:
+                print(f"Date: {post[1]}, Author: {post[2]}\nPost: {post[0]}\n")
+        else:
+            print("No posts found for this game.")
+
+    except sqlite3.Error as e:
+        print(f"An error occurred: {e}")
 
 
-def see_game_details(conn, game_id):
+def add_comment_to_dashboard(conn, game_id, user_id):
+    """
+    Allow the user to add a comment to the dashboard for a specific game.
+
+    :param conn: Database connection object
+    :param game_id: The ID of the game
+    :param user_id: The ID of the user
+    """
+    try:
+        # Fetch the dashboardID for this game
+        cur = conn.cursor()
+        query = "SELECT dashboardID FROM Commuinty WHERE gameID = ?"
+        cur.execute(query, (game_id,))
+        result = cur.fetchone()
+
+        if result:
+            dashboard_id = result[0]
+
+            post = input("Enter your comment: ")
+            date = "CURRENT_DATE"  # Replace with your date handling as needed
+            author = user_id  # Replace with actual author identifier
+
+            # Insert the new comment
+            insert_query = """
+            INSERT INTO Dashboard (dashboardID, post, date, Author)
+            VALUES (?, ?, ?, ?)
+            """
+            cur.execute(insert_query, (dashboard_id, post, date, author))
+            conn.commit()
+            print("Your comment has been added.")
+
+        else:
+            print("No dashboard found for this game.")
+
+    except sqlite3.Error as e:
+        print(f"An error occurred: {e}")
+        conn.rollback()  # Rollback any changes if there's an error
+
+
+def goto_community(conn, game_id, user_id):
+    """
+    Lead user to the community page for a specific game.
+
+    :param conn: Database connection object
+    :param game_id: The ID of the game
+    :param user_id: The ID of the user
+    """
+    fetch_posts(conn, game_id)  # Display existing posts
+
+    while True:
+        print("\nCommunity Options:")
+        print("1. Add Comment")
+        print("2. Return to Game Library")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            add_comment_to_dashboard(conn, game_id, user_id)  # Implement this function
+        elif choice == "2":
+            break  # Return to the previous menu
+        else:
+            print("Invalid choice. Please try again.")
+
+
+def see_game_details(conn, game_id, user_id):
     """
     Display details of a certain game, including the number of users who added it to their wishlist.
     The user should be able to access the game's community or return to the previous page.
@@ -61,7 +157,7 @@ def see_game_details(conn, game_id):
 
                 if choice == "1":
                     # Go to Community
-                    goto_community()  # Implement this function to handle community interactions
+                    goto_community(conn,game_id, user_id)
                 elif choice == "2":
                     break  # Return to the previous menu
                 else:

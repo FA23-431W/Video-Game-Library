@@ -3,8 +3,6 @@ import sqlite3
 from util import *
 
 
-
-
 def remove_game_from_wishlist(conn, user_id, game_id):
     """
     Remove a specific game from a user's wishlist. If the wishlist becomes empty, update the User table accordingly.
@@ -52,7 +50,6 @@ def remove_game_from_wishlist(conn, user_id, game_id):
         conn.rollback()  # Rollback in case of error
 
 
-
 def wishlist_menu(conn, user_id):
     while True:
         print("\n###################### My Wishlist  ######################")
@@ -86,7 +83,7 @@ def wishlist_menu(conn, user_id):
         # Option 1
         if choice == "1":
             game_id = input("Enter Game ID to view details: ")
-            see_game_details(conn, game_id)
+            see_game_details(conn, game_id, user_id)
         # Option 2
         elif choice == "2":
             game_id = input("Enter game ID to remove from wishlist: ")

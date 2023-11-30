@@ -31,12 +31,10 @@ def sort_games(games_list):
 
     return sorted_games
 
-
     pass
 
 
-def show_gamelist(game_list):
-    display_game_list(game_list)  # Display games in selected category
+def show_gamelist(game_list,user_id):
     """
        This function receive a list of games in the format of
        gameID | Title | mainCate | price | release 
@@ -49,6 +47,8 @@ def show_gamelist(game_list):
      """
 
     while True:
+        display_game_list(game_list)  # Display games in selected category
+
         print("\n--- Game Library Options ---")
         print("1. Sort By")
         print("2. View Certain Game")
@@ -57,18 +57,14 @@ def show_gamelist(game_list):
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            games = sort_games(game_list)  # Implement this to sort games
+            game_list = sort_games(game_list)  # Implement this to sort games
         elif choice == "2":
             game_id = input("Enter Game ID to view details: ")
-            see_game_details(conn, game_id)  # Use the already implemented function
+            see_game_details(conn, game_id,user_id)  # Use the already implemented function
         elif choice == "3":
             break  # Return to the previous menu
         else:
             print("Invalid choice. Please try again.")
-
-        # Re-display the sorted/updated list of games
-        if choice == "1":
-            display_game_list(games)  # Implement this to display the list of games
 
 
 def get_games_from_cata(category):
@@ -110,7 +106,7 @@ def game_lib_options(conn, games):
     pass
 
 
-def browse_by_category(conn):
+def browse_by_category(conn,user_id):
     categories = get_categories(conn)  # Fetch categories
 
     if categories:
@@ -122,7 +118,7 @@ def browse_by_category(conn):
             choice = int(input("\nEnter the number of the category to browse: ")) - 1
             if 0 <= choice < len(categories):
                 game_list = get_games_from_cata(categories[choice])
-                show_gamelist(game_list)
+                show_gamelist(game_list,user_id)
 
             else:
                 print("Invalid choice. Please enter a valid number.")
@@ -133,12 +129,14 @@ def browse_by_category(conn):
 
 
 def get_all_games(conn):
-    pass
+    game_list = 0
+    return game_list
 
 
-def show_all_games(conn):
+def show_all_games(conn, user_id):
     print("\nAll Games:")
-    games = display_game_list(conn)  # Implement this to fetch and show all games
+    game_list = get_all_games(conn)
+    display_game_list(game_list)  # Implement this to fetch and show all games
 
     while True:
         print("\n1. Sort Games")
@@ -148,10 +146,10 @@ def show_all_games(conn):
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            sort_games(games)  # Implement this to sort games
+            sort_games(game_list)  # Implement this to sort games
         elif choice == "2":
             game_id = input("Enter Game ID to view details: ")
-            see_game_details(conn, game_id)
+            see_game_details(conn, game_id,user_id)
         elif choice == "3":
             break
         else:
@@ -168,9 +166,9 @@ def game_library_menu(conn, user_id):
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            browse_by_category(conn)
+            browse_by_category(conn,user_id)
         elif choice == "2":
-            show_all_games(conn)
+            show_all_games(conn, user_id)
         elif choice == "3":
             break  # Return to the main menu
         else:
