@@ -1,5 +1,4 @@
-import sqlite3
-# from admin import admin_menu
+import mysql.connector
 
 def view_menu(conn, user_id):
   while True:
@@ -30,7 +29,6 @@ def view_menu(conn, user_id):
     elif choice == "7":
         view_game_all(conn,user_id)
     elif choice == "8":
-        # admin_menu(conn, user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -70,7 +68,6 @@ def view_game(conn, user_id):
           else:
             print("No game found.")
       elif choice == "4":
-          view_menu(conn,user_id)
           break
       else:
           print("Invalid choice. Please try again.")
@@ -81,7 +78,7 @@ def view_gamelist(conn):
     cur.execute("SELECT * FROM Game")
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()  
 
@@ -89,10 +86,10 @@ def view_gameCate(conn):
   try:
     cur = conn.cursor()
     category = input("Enter a category: ")
-    cur.execute("SELECT * FROM Game WHERE mainCate = ?",(category))
+    cur.execute("SELECT * FROM Game WHERE mainCate = %s",(category))
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -112,7 +109,7 @@ def view_sortedGame(conn,user_id):
         cur.execute("SELECT * FROM Game ORDER BY price")
         rows = cur.fetchall()
         return rows
-      except sqlite3.Error as e:
+      except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()
     elif choice == "2":
@@ -121,7 +118,7 @@ def view_sortedGame(conn,user_id):
         cur.execute("SELECT * FROM Game ORDER BY release")
         rows = cur.fetchall()
         return rows
-      except sqlite3.Error as e:
+      except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()
     elif choice == "3":
@@ -130,7 +127,7 @@ def view_sortedGame(conn,user_id):
         cur.execute("SELECT * FROM Game ORDER BY title")
         rows = cur.fetchall()
         return rows
-      except sqlite3.Error as e:
+      except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()
     elif choice == "4":
@@ -139,11 +136,10 @@ def view_sortedGame(conn,user_id):
         cur.execute("SELECT * FROM Game ORDER BY mainCate")
         rows = cur.fetchall()
         return rows
-      except sqlite3.Error as e:
+      except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()
     elif choice == "5":
-        view_game(conn,user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -171,7 +167,6 @@ def view_publisher(conn,user_id):
           else:
             print("No publisher found.")
       elif choice == "3":
-          view_menu(conn,user_id)
           break
       else:
           print("Invalid choice. Please try again.")
@@ -182,7 +177,7 @@ def view_publisherlist(conn):
       cur.execute("SELECT * FROM Publisher")
       rows = cur.fetchall()
       return rows
-    except sqlite3.Error as e:
+    except mysql.connector.Error as e:
       print(f"An error occurred: {e}")
       conn.rollback()  
 
@@ -200,7 +195,7 @@ def view_sortedP(conn, user_id):
         cur.execute("SELECT * FROM Publisher ORDER BY name")
         rows = cur.fetchall()
         return rows
-      except sqlite3.Error as e:
+      except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()
     elif choice == "2":
@@ -209,11 +204,10 @@ def view_sortedP(conn, user_id):
         cur.execute("SELECT * FROM Publisher ORDER BY year")
         rows = cur.fetchall()
         return rows
-      except sqlite3.Error as e:
+      except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()
     elif choice == "3":
-        view_game(conn,user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -249,7 +243,6 @@ def view_achievemnt(conn,user_id):
       else:
         print("No Achievement found.")
     elif choice == "4":
-        view_menu(conn,user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -260,7 +253,7 @@ def view_alist(conn):
     cur.execute("SELECT * FROM Achievement")
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()  
 
@@ -268,10 +261,10 @@ def view_specificA(conn):
   try:
     cur = conn.cursor()
     gameID = input("Enter a gameID: ")
-    cur.execute("SELECT * FROM Achievement WHERE gameID = ?",(gameID))
+    cur.execute("SELECT * FROM Achievement WHERE gameID = %s",(gameID))
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -281,7 +274,7 @@ def view_sortedA(conn):
     cur.execute("SELECT * FROM Achievement ORDER BY gameID")
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -308,7 +301,6 @@ def view_category(conn,user_id):
         else:
           print("No subcategory found.")
     elif choice == "3":
-        view_menu(conn,user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -319,7 +311,7 @@ def view_allcate(conn):
     cur.execute("SELECT * FROM Category")
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -327,10 +319,10 @@ def view_specificCate(conn):
   try:
     cur = conn.cursor()
     cate = input("Enter a main category:")
-    cur.execute("SELECT * FROM Category WHERE mainCate = ?",(cate))
+    cur.execute("SELECT * FROM Category WHERE mainCate = %s",(cate))
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -357,7 +349,6 @@ def view_community(conn,user_id):
         else:
           print("No community found.")
     elif choice == "3":
-        view_menu(conn,user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -368,7 +359,7 @@ def view_allcommun(conn):
     cur.execute("SELECT * FROM Community")
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -376,10 +367,10 @@ def view_specificCommun(conn):
   try:
     cur = conn.cursor()
     gameID = input("Enter a gameID:")
-    cur.execute("SELECT * FROM Community WHERE gameID = ?",(gameID))
+    cur.execute("SELECT * FROM Community WHERE gameID = %s",(gameID))
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -406,7 +397,6 @@ def view_dashboard(conn,user_id):
         else:
           print("No dashboard found.")
     elif choice == "3":
-        view_menu(conn,user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -417,7 +407,7 @@ def view_alldash(conn):
     cur.execute("SELECT * FROM Dashboard")
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -425,10 +415,10 @@ def view_specificDash(conn):
   try:
     cur = conn.cursor()
     communityID = input("Enter a communityID:")
-    cur.execute("SELECT * FROM Community c, Dashboard d WHERE c.communityID = ? AND c.dashboardID = d.dashboardID",(communityID))
+    cur.execute("SELECT * FROM Community c, Dashboard d WHERE c.communityID = %s AND c.dashboardID = d.dashboardID",(communityID))
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
 
@@ -455,7 +445,6 @@ def view_game_all(conn,user_id):
         else:
           print("No game info found.")
     elif choice == "3":
-        view_menu(conn,user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -467,7 +456,7 @@ def view_allinfo(conn):
     cur.execute(query)
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -475,10 +464,10 @@ def view_specificinfo(conn):
   try:
     cur = conn.cursor()
     gameTitle = input("Enter a game name:")
-    query = "SELECT g.Title, p.name, a.achievmentID, cate.subCate, c.communityID, wu.userID FROM Game g, Publisher p, Achievement a, Category cate, Community c, WishlistUser wu, WishlistGame wg WHERE g.title=? AND g.publisherID = p.pulisherID AND a.gameID = g.gameID AND g.mainCate = cate.mainCate AND g.gameID = c.gameID AND g.gameID = wg.gameID AND wg.wishlistID = wu.wishlistID"
+    query = "SELECT g.Title, p.name, a.achievmentID, cate.subCate, c.communityID, wu.userID FROM Game g, Publisher p, Achievement a, Category cate, Community c, WishlistUser wu, WishlistGame wg WHERE g.title = %s AND g.publisherID = p.pulisherID AND a.gameID = g.gameID AND g.mainCate = cate.mainCate AND g.gameID = c.gameID AND g.gameID = wg.gameID AND wg.wishlistID = wu.wishlistID"
     cur.execute(query,(gameTitle))
     rows = cur.fetchall()
     return rows
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
