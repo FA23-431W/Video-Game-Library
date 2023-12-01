@@ -1,6 +1,5 @@
-import sqlite3
-
 from util import *
+from main import *
 
 
 def remove_game_from_wishlist(conn, user_id, game_id):
@@ -18,9 +17,9 @@ def remove_game_from_wishlist(conn, user_id, game_id):
         delete_query = """
         DELETE FROM WishlistGame
         WHERE wishlistID = (
-            SELECT wishlistID FROM User WHERE userID = ?
+            SELECT wishlistID FROM User WHERE userID = %s
         )
-        AND gameID = ?
+        AND gameID = %s
         """
         cur.execute(delete_query, (user_id, game_id))
 
@@ -28,7 +27,7 @@ def remove_game_from_wishlist(conn, user_id, game_id):
         check_query = """
         SELECT COUNT(*) FROM WishlistGame
         WHERE wishlistID = (
-            SELECT wishlistID FROM User WHERE userID = ?
+            SELECT wishlistID FROM User WHERE userID = %s
         )                   
         """
         cur.execute(check_query, (user_id,))
@@ -37,15 +36,14 @@ def remove_game_from_wishlist(conn, user_id, game_id):
         if count == 0:
             # If the wishlist is empty, update the User table (e.g., set wishlistID to NULL or a default value)
             update_query = """
-            UPDATE User SET wishlistID = NULL WHERE userID = ?
+            UPDATE User SET wishlistID = NULL WHERE userID = %s
             """
             cur.execute(update_query, (user_id,))
 
-        # Commit the transaction
         conn.commit()
         print(f"Game with ID {game_id} has been removed from the user's wishlist.")
 
-    except sqlite3.Error as e:
+    except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()  # Rollback in case of error
 
@@ -60,7 +58,7 @@ def wishlist_menu(conn, user_id):
             FROM User u
             JOIN WishlistGame wg ON u.wishlistID = wg.wishlistID
             JOIN Game g ON wg.gameID = g.gameID
-            WHERE u.userID = ?
+            WHERE u.userID = %s
 
                """
         cur = conn.cursor()
@@ -96,5 +94,9 @@ def wishlist_menu(conn, user_id):
 
 
 if __name__ == '__main__':
-    conn = sqlite3.connect("Data/data.db")
-    wishlist_menu(conn, 997)
+    conn = create_connection()
+    if conn:
+        wishlist_menu(conn,977)
+        conn.close()
+    else:
+        print("Failed to establish a database connection.")

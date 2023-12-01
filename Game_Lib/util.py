@@ -1,9 +1,8 @@
 import sqlite3
-
+import mysql.connector
 
 def display_game_list(game_info):
     if game_info:
-        print("\nYour Wishlist Games:")
         header = "{:<8} | {:<40} | {:<15} | {:<10} | {:<15}"
         print(header.format("Game ID", "Title", "Category", "Price", "Release Date"))
         print("-" * 100)
@@ -12,6 +11,21 @@ def display_game_list(game_info):
             print(header.format(item[0], item[1], item[2], item[3], item[4]))
     else:
         print("Your wishlist is empty.")
+
+
+def create_connection():
+    """Create a database connection to the MySQL server."""
+    try:
+        conn = mysql.connector.connect(
+            host='localhost',  # Your MySQL server host
+            user='root',  # Your MySQL username
+            password='291878113',  # Your MySQL password
+            database='Game_Lib'  # Your database name
+        )
+        return conn
+    except mysql.connector.Error as e:
+        print(f"An error occurred while connecting to the database: {e}")
+        return None
 
 
 # This function leads user to the community page,
@@ -32,8 +46,8 @@ def fetch_posts(conn, game_id):
         query = """
         SELECT d.post, d.date, d.Author
         FROM Dashboard d
-        JOIN Commuinty c ON d.dashboardID = c.dashboardID
-        WHERE c.gameID = ?
+        JOIN Community c ON d.dashboardID = c.dashboardID
+        WHERE c.gameID = %s
         ORDER BY d.date DESC
         """
         cur.execute(query, (game_id,))
@@ -46,7 +60,7 @@ def fetch_posts(conn, game_id):
         else:
             print("No posts found for this game.")
 
-    except sqlite3.Error as e:
+    except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
 
 
@@ -61,7 +75,7 @@ def add_comment_to_dashboard(conn, game_id, user_id):
     try:
         # Fetch the dashboardID for this game
         cur = conn.cursor()
-        query = "SELECT dashboardID FROM Commuinty WHERE gameID = ?"
+        query = "SELECT dashboardID FROM Community WHERE gameID = %s"
         cur.execute(query, (game_id,))
         result = cur.fetchone()
 
@@ -75,7 +89,7 @@ def add_comment_to_dashboard(conn, game_id, user_id):
             # Insert the new comment
             insert_query = """
             INSERT INTO Dashboard (dashboardID, post, date, Author)
-            VALUES (?, ?, ?, ?)
+            VALUES (%s, %s, %s, %s)
             """
             cur.execute(insert_query, (dashboard_id, post, date, author))
             conn.commit()
@@ -84,7 +98,7 @@ def add_comment_to_dashboard(conn, game_id, user_id):
         else:
             print("No dashboard found for this game.")
 
-    except sqlite3.Error as e:
+    except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()  # Rollback any changes if there's an error
 
@@ -131,7 +145,7 @@ def see_game_details(conn, game_id, user_id):
         FROM Game g
         LEFT JOIN Publisher p ON g.publisherID = p.publisherID
         LEFT JOIN WishlistGame wg ON g.gameID = wg.gameID
-        WHERE g.gameID = ?
+        WHERE g.gameID = %s
         GROUP BY g.gameID
         """
 
@@ -157,7 +171,7 @@ def see_game_details(conn, game_id, user_id):
 
                 if choice == "1":
                     # Go to Community
-                    goto_community(conn,game_id, user_id)
+                    goto_community(conn, game_id, user_id)
                 elif choice == "2":
                     break  # Return to the previous menu
                 else:
@@ -166,5 +180,5 @@ def see_game_details(conn, game_id, user_id):
             print("Game not found.")
             input("\nEnter any input to return...")  # Wait for user input
 
-    except sqlite3.Error as e:
+    except mysql.connector.Error as e:
         print(f"An error occurred: {e}")

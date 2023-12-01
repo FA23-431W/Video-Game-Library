@@ -1,11 +1,11 @@
-import sqlite3
-import user
-
 from user import *
 from admin import *
-
+from util import *
 
 def login(conn, username, password):
+    username = "ggallager1"
+    password = 'vF9=Qm"lJG'
+
     """
     Login function to authenticate a user and return their userID.
 
@@ -18,7 +18,7 @@ def login(conn, username, password):
 
     try:
         # Query to check if user exists and fetch their userID
-        query = "SELECT userID FROM User WHERE name=? AND password=?"
+        query = "SELECT userID FROM User WHERE name=%s AND password=%s"
         cur.execute(query, (username, password))
         # Fetch one record
         user = cur.fetchone()
@@ -26,22 +26,15 @@ def login(conn, username, password):
             return user[0]  # Return the userID
         else:
             return None
-    except sqlite3.Error as e:
+    except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
         return None
 
 
-def create_connection(db_file):
-    """Create a database connection to the SQLite database specified by db_file."""
-    conn = None
-    try:
-        conn = sqlite3.connect(db_file)
-    except sqlite3.Error as e:
-        print(e)
-    return conn
 
 
-def main_menu():
+# Update your main_menu function to use the MySQL connection
+def main_menu(conn):
     while True:
         print("    Welcome to the Game Library App !")
         print("------------------------------------------")
@@ -60,13 +53,13 @@ def main_menu():
                 print("Login successful!\n")
                 print("Welcome {} ! \nUser ID: {}".format(name, user_id))
                 # Check if the user is admin
-                # !! this is a temp, after implement admin, we should use adminid to check
+                # !! this is a temp, after implementing admin functionality, use adminid to check
                 if name == "admin":
                     admin_menu(conn, user_id)
                 else:
                     user_menu(conn, user_id)
             else:
-                print("Login failed, No such user & passward. Please try again.")
+                print("Login failed, No such user & password. Please try again.")
         elif choice == "2":
             print("Exiting the application...")
             break
@@ -75,6 +68,9 @@ def main_menu():
 
 
 if __name__ == '__main__':
-    conn = create_connection("Data/data.db")
-    main_menu()
-    conn.close()
+    conn = create_connection()
+    if conn:
+        main_menu(conn)
+        conn.close()
+    else:
+        print("Failed to establish a database connection.")

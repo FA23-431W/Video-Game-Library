@@ -1,4 +1,3 @@
-import sqlite3
 from util import *
 
 
@@ -67,10 +66,10 @@ def show_gamelist(game_list,user_id):
             print("Invalid choice. Please try again.")
 
 
-def get_games_from_cata(category):
+def get_games_from_cata(conn,category):
     try:
         cur = conn.cursor()
-        query = "SELECT gameID, Title, mainCate, price, release FROM Game WHERE mainCate = ?"
+        query = "SELECT gameID, Title, mainCate, price, release FROM Game WHERE mainCate = %s"
         cur.execute(query, (category,))
         games = cur.fetchall()
 
@@ -79,7 +78,7 @@ def get_games_from_cata(category):
         else:
             print(f"No games found in {category} category.")
 
-    except sqlite3.Error as e:
+    except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
 
 
@@ -88,7 +87,7 @@ def get_categories(conn):
     Fetch all unique game categories.
 
     :param conn: Database connection object
-    :return: List of categories
+    :return: List of categorie
     """
     categories = []
     try:
@@ -96,14 +95,41 @@ def get_categories(conn):
         query = "SELECT DISTINCT mainCate FROM Game ORDER BY mainCate"
         cur.execute(query)
         categories = [category[0] for category in cur.fetchall()]
-    except sqlite3.Error as e:
+    except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
 
     return categories
 
 
-def game_lib_options(conn, games):
-    pass
+def get_all_games(conn):
+    """
+    Fetch all games from the database.
+
+    :param conn: Database connection object
+    :return: List of all games
+    """
+    try:
+        # Create a new cursor
+        cur = conn.cursor()
+
+        # SQL query to select all games
+        query = "SELECT gameID, Title, mainCate, price, `release` FROM Game"
+
+        # Execute the query
+        cur.execute(query)
+
+        # Fetch all the results
+        game_list = cur.fetchall()
+
+        # Return the list of games
+        return game_list
+
+    except mysql.connector.Error as e:
+        # Print an error message if an exception occurs
+        print(f"An error occurred: {e}")
+
+    return []  # Return an empty list if an error occurs or no games are found
+
 
 
 def browse_by_category(conn,user_id):
@@ -117,7 +143,7 @@ def browse_by_category(conn,user_id):
         try:
             choice = int(input("\nEnter the number of the category to browse: ")) - 1
             if 0 <= choice < len(categories):
-                game_list = get_games_from_cata(categories[choice])
+                game_list = get_games_from_cata(conn,categories[choice])
                 show_gamelist(game_list,user_id)
 
             else:
@@ -176,5 +202,9 @@ def game_library_menu(conn, user_id):
 
 
 if __name__ == '__main__':
-    conn = sqlite3.connect("Data/data.db")
-    game_library_menu(conn, 997)
+    conn = create_connection()
+    if conn:
+        game_library_menu(conn,977)
+        conn.close()
+    else:
+        print("Failed to establish a database connection.")

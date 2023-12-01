@@ -1,6 +1,7 @@
 import sqlite3
 from Game_Lib.game_lib import *
 from wishlist import *
+from main import *
 
 
 
@@ -26,5 +27,10 @@ def user_menu(conn, user_id):
 
 
 if __name__ == '__main__':
-    conn = sqlite3.connect("Data/data.db")
-    user_menu(conn, 865)
+    if __name__ == '__main__':
+        conn = create_connection()
+        if conn:
+            main_menu(conn)
+            conn.close()
+        else:
+            print("Failed to establish a database connection.")
