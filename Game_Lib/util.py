@@ -1,5 +1,7 @@
-import sqlite3
+# import sqlite3
 import mysql.connector
+from datetime import datetime
+
 
 def display_game_list(game_info):
     if game_info:
@@ -40,7 +42,6 @@ def fetch_posts(conn, game_id):
     :param game_id: The ID of the game
     """
 
-    # TYPO in Community!
     try:
         cur = conn.cursor()
         query = """
@@ -83,7 +84,7 @@ def add_comment_to_dashboard(conn, game_id, user_id):
             dashboard_id = result[0]
 
             post = input("Enter your comment: ")
-            date = "CURRENT_DATE"  # Replace with your date handling as needed
+            date = datetime.now().strftime("%m-%d-%Y")   # Replace with your date handling as needed
             author = user_id  # Replace with actual author identifier
 
             # Insert the new comment

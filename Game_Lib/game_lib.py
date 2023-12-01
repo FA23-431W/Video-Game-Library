@@ -33,7 +33,7 @@ def sort_games(games_list):
     pass
 
 
-def show_gamelist(game_list,user_id):
+def show_gamelist(game_list, user_id):
     """
        This function receive a list of games in the format of
        gameID | Title | mainCate | price | release 
@@ -59,14 +59,14 @@ def show_gamelist(game_list,user_id):
             game_list = sort_games(game_list)  # Implement this to sort games
         elif choice == "2":
             game_id = input("Enter Game ID to view details: ")
-            see_game_details(conn, game_id,user_id)  # Use the already implemented function
+            see_game_details(conn, game_id, user_id)  # Use the already implemented function
         elif choice == "3":
             break  # Return to the previous menu
         else:
             print("Invalid choice. Please try again.")
 
 
-def get_games_from_cata(conn,category):
+def get_games_from_cata(conn, category):
     try:
         cur = conn.cursor()
         query = "SELECT gameID, Title, mainCate, price, release FROM Game WHERE mainCate = %s"
@@ -131,8 +131,7 @@ def get_all_games(conn):
     return []  # Return an empty list if an error occurs or no games are found
 
 
-
-def browse_by_category(conn,user_id):
+def browse_by_category(conn, user_id):
     categories = get_categories(conn)  # Fetch categories
 
     if categories:
@@ -143,8 +142,8 @@ def browse_by_category(conn,user_id):
         try:
             choice = int(input("\nEnter the number of the category to browse: ")) - 1
             if 0 <= choice < len(categories):
-                game_list = get_games_from_cata(conn,categories[choice])
-                show_gamelist(game_list,user_id)
+                game_list = get_games_from_cata(conn, categories[choice])
+                show_gamelist(game_list, user_id)
 
             else:
                 print("Invalid choice. Please enter a valid number.")
@@ -154,17 +153,13 @@ def browse_by_category(conn,user_id):
         print("No categories found.")
 
 
-def get_all_games(conn):
-    game_list = 0
-    return game_list
-
-
 def show_all_games(conn, user_id):
     print("\nAll Games:")
     game_list = get_all_games(conn)
-    display_game_list(game_list)  # Implement this to fetch and show all games
+    display_game_list(game_list)
 
     while True:
+        display_game_list(game_list)
         print("\n1. Sort Games")
         print("2. View Certain Game")
         print("3. Return")
@@ -175,7 +170,7 @@ def show_all_games(conn, user_id):
             sort_games(game_list)  # Implement this to sort games
         elif choice == "2":
             game_id = input("Enter Game ID to view details: ")
-            see_game_details(conn, game_id,user_id)
+            see_game_details(conn, game_id, user_id)
         elif choice == "3":
             break
         else:
@@ -192,7 +187,7 @@ def game_library_menu(conn, user_id):
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            browse_by_category(conn,user_id)
+            browse_by_category(conn, user_id)
         elif choice == "2":
             show_all_games(conn, user_id)
         elif choice == "3":
@@ -204,7 +199,7 @@ def game_library_menu(conn, user_id):
 if __name__ == '__main__':
     conn = create_connection()
     if conn:
-        game_library_menu(conn,977)
+        game_library_menu(conn, 977)
         conn.close()
     else:
         print("Failed to establish a database connection.")

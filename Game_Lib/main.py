@@ -1,5 +1,5 @@
-from user import *
-from admin import *
+from user import user_menu
+from admin import admin_menu
 from util import *
 
 def login(conn, username, password):

@@ -1,5 +1,5 @@
 import sqlite3
-from admin import admin_menu
+# from admin import admin_menu
 
 def delete_menu(conn, user_id):
   while True:
@@ -15,7 +15,7 @@ def delete_menu(conn, user_id):
     elif choice == "2":
         delete_table(conn,user_id)
     elif choice == "3":
-        admin_menu(conn, user_id)
+        # admin_menu(conn, user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -48,7 +48,7 @@ def delete_specfic(conn,user_id):
       elif choice == "7":
           delete_user(conn)
       elif choice == "8":
-          admin_menu(conn, user_id)
+          # admin_menu(conn, user_id)
           break
       else:
         print("Invalid choice. Please try again.")
@@ -231,7 +231,7 @@ def delete_table(conn,user_id):
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "9":
-        admin_menu(conn, user_id)
+        # admin_menu(conn, user_id)
         break
       else:
         print("Invalid choice. Please try again.")

@@ -1,5 +1,5 @@
 import sqlite3
-from admin import admin_menu
+# from admin import admin_menu
 
 def insert_menu(conn, user_id):
   while True:
@@ -24,7 +24,7 @@ def insert_menu(conn, user_id):
     elif choice == "5":
         insert_community(conn)
     elif choice == "6":
-        admin_menu(conn, user_id)
+        # admin_menu(conn, user_id)
         break
     else:
         print("Invalid choice. Please try again.")

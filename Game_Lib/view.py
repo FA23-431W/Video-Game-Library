@@ -1,5 +1,5 @@
 import sqlite3
-from admin import admin_menu
+# from admin import admin_menu
 
 def view_menu(conn, user_id):
   while True:
@@ -30,7 +30,7 @@ def view_menu(conn, user_id):
     elif choice == "7":
         view_game_all(conn,user_id)
     elif choice == "8":
-        admin_menu(conn, user_id)
+        # admin_menu(conn, user_id)
         break
     else:
         print("Invalid choice. Please try again.")

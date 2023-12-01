@@ -1,5 +1,4 @@
 from util import *
-from main import *
 
 
 def remove_game_from_wishlist(conn, user_id, game_id):
