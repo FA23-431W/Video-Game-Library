@@ -236,7 +236,7 @@ def view_achievemnt(conn,user_id):
         else:
           print("No Achievement found.")
     elif choice == "3":
-      sortedA = view_sortedA(conn, user_id)
+      sortedA = view_sortedA(conn)
       if sortedA:
         for row in sortedA:
           print(row)
@@ -261,7 +261,7 @@ def view_specificA(conn):
   try:
     cur = conn.cursor()
     gameID = input("Enter a gameID: ")
-    cur.execute("SELECT * FROM Achievement WHERE gameID = %s",(gameID))
+    cur.execute("SELECT * FROM Achievement WHERE gameID = %s",(gameID,))
     rows = cur.fetchall()
     return rows
   except mysql.connector.Error as e:
@@ -289,6 +289,7 @@ def view_category(conn,user_id):
     if choice == "1":
       cate = view_allcate(conn)
       if cate:
+          print("subcate, maincate")
           for row in cate:
             print(row)
       else:
@@ -319,7 +320,7 @@ def view_specificCate(conn):
   try:
     cur = conn.cursor()
     cate = input("Enter a main category:")
-    cur.execute("SELECT * FROM Category WHERE mainCate = %s",(cate))
+    cur.execute("SELECT subCate FROM Category WHERE mainCate = %s",(cate,))
     rows = cur.fetchall()
     return rows
   except mysql.connector.Error as e:
@@ -367,7 +368,7 @@ def view_specificCommun(conn):
   try:
     cur = conn.cursor()
     gameID = input("Enter a gameID:")
-    cur.execute("SELECT * FROM Community WHERE gameID = %s",(gameID))
+    cur.execute("SELECT * FROM Community WHERE gameID = %s",(gameID,))
     rows = cur.fetchall()
     return rows
   except mysql.connector.Error as e:
@@ -415,7 +416,7 @@ def view_specificDash(conn):
   try:
     cur = conn.cursor()
     communityID = input("Enter a communityID:")
-    cur.execute("SELECT * FROM Community c, Dashboard d WHERE c.communityID = %s AND c.dashboardID = d.dashboardID",(communityID))
+    cur.execute("SELECT * FROM Community c, Dashboard d WHERE c.communityID = %s AND c.dashboardID = d.dashboardID",(communityID,))
     rows = cur.fetchall()
     return rows
   except mysql.connector.Error as e:
@@ -433,6 +434,7 @@ def view_game_all(conn,user_id):
     if choice == "1":
       info = view_allinfo(conn)
       if info:
+          print("Game Title, Publisher Name, Game achievementID, subCate, communityID, userID_likes_the_game")
           for row in info:
             print(row)
       else:
@@ -440,6 +442,7 @@ def view_game_all(conn,user_id):
     elif choice == "2":
         specificinfo = view_specificinfo(conn)
         if specificinfo:
+          print("Game Title, Publisher Name, Game achievementID, subCate, communityID, userID_likes_the_game")
           for row in specificinfo:
             print(row)
         else:
@@ -452,7 +455,7 @@ def view_game_all(conn,user_id):
 def view_allinfo(conn):
   try:
     cur = conn.cursor()
-    query = "SELECT g.Title, p.name, a.achievmentID, cate.subCate, c.communityID, wu.userID FROM Game g, Publisher p, Achievement a, Category cate, Community c, WishlistUser wu, WishlistGame wg WHERE g.publisherID = p.pulisherID AND a.gameID = g.gameID AND g.mainCate = cate.mainCate AND g.gameID = c.gameID AND g.gameID = wg.gameID AND wg.wishlistID = wu.wishlistID"
+    query = "SELECT g.Title, p.name, a.achievementID, cate.subCate, c.communityID, wu.userID FROM Game g, Publisher p, Achievement a, Category cate, Community c, WishlistUser wu, WishlistGame wg WHERE g.publisherID = p.publisherID AND a.gameID = g.gameID AND g.mainCate = cate.mainCate AND g.gameID = c.gameID AND g.gameID = wg.gameID AND wg.wishlistID = wu.wishlistID"
     cur.execute(query)
     rows = cur.fetchall()
     return rows
@@ -464,8 +467,8 @@ def view_specificinfo(conn):
   try:
     cur = conn.cursor()
     gameTitle = input("Enter a game name:")
-    query = "SELECT g.Title, p.name, a.achievmentID, cate.subCate, c.communityID, wu.userID FROM Game g, Publisher p, Achievement a, Category cate, Community c, WishlistUser wu, WishlistGame wg WHERE g.title = %s AND g.publisherID = p.pulisherID AND a.gameID = g.gameID AND g.mainCate = cate.mainCate AND g.gameID = c.gameID AND g.gameID = wg.gameID AND wg.wishlistID = wu.wishlistID"
-    cur.execute(query,(gameTitle))
+    query = "SELECT g.Title, p.name, a.achievementID, cate.subCate, c.communityID, wu.userID FROM Game g, Publisher p, Achievement a, Category cate, Community c, WishlistUser wu, WishlistGame wg WHERE g.title = %s AND g.publisherID = p.publisherID AND a.gameID = g.gameID AND g.mainCate = cate.mainCate AND g.gameID = c.gameID AND g.gameID = wg.gameID AND wg.wishlistID = wu.wishlistID"
+    cur.execute(query,(gameTitle,))
     rows = cur.fetchall()
     return rows
   except mysql.connector.Error as e:
