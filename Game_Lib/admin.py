@@ -37,8 +37,8 @@ def admin_menu(conn, user_id):
 
 if __name__ == '__main__':
     conn = create_connection()
-        if conn:
-            main_menu(conn)
-            conn.close()
-        else:
-            print("Failed to establish a database connection.")
+    if conn:
+    	main_menu(conn)
+    	conn.close()
+    else:
+        print("Failed to establish a database connection.")
