@@ -75,7 +75,7 @@ def update_game(conn):
       elif element == "release":
         update_query = """
             UPDATE Game
-            SET release = %s
+            SET `release` = %s
             WHERE gameID = %s
           """
         cur.execute(update_query, (value, gameID))
