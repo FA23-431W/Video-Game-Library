@@ -1,5 +1,4 @@
-import sqlite3
-# from admin import admin_menu
+import mysql.connector
 
 def update_menu(conn,user_id):
   while True:
@@ -29,7 +28,6 @@ def update_menu(conn,user_id):
       elif choice == "7":
           update_user(conn)
       elif choice == "8":
-          # admin_menu(conn, user_id)
           break
       else:
         print("Invalid choice. Please try again.")
@@ -45,47 +43,47 @@ def update_game(conn):
       if element == "publisherID":
         update_query = """
             UPDATE Game
-            SET publisherID = ?
-            WHERE gameID = ?
+            SET publisherID = %s
+            WHERE gameID = %s
             """
         cur.execute(update_query, (value, gameID))
         conn.commit()
       elif element == "title":
         update_query = """
             UPDATE Game
-            SET title = ?
-            WHERE gameID = ?
+            SET title = %s
+            WHERE gameID = %s
           """
         cur.execute(update_query, (value, gameID))
         conn.commit()
       elif element == "mainCate":
         update_query = """
             UPDATE Game
-            SET mainCate = ?
-            WHERE gameID = ?
+            SET mainCate = %s
+            WHERE gameID = %s
           """
         cur.execute(update_query, (value, gameID))
         conn.commit()
       elif element == "price":
         update_query = """
             UPDATE Game
-            SET price = ?
-            WHERE gameID = ?
+            SET price = %s
+            WHERE gameID = %s
           """
         cur.execute(update_query, (value, gameID))
         conn.commit()
       elif element == "release":
         update_query = """
             UPDATE Game
-            SET release = ?
-            WHERE gameID = ?
+            SET release = %s
+            WHERE gameID = %s
           """
         cur.execute(update_query, (value, gameID))
         conn.commit()
       else:
         print("Invalid choice. Please try again.")
     print("Your game info has updated.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
 
@@ -100,23 +98,23 @@ def update_publisher(conn):
       if element == "name":
         update_query = """
             UPDATE Publisher
-            SET name = ?
-            WHERE publisherID = ?
+            SET name = %s
+            WHERE publisherID = %s
             """
         cur.execute(update_query, (value, publisherID))
         conn.commit()
       elif element == "year":
         update_query = """
             UPDATE Publisher
-            SET year = ?
-            WHERE publisherID = ?
+            SET year = %s
+            WHERE publisherID = %s
           """
         cur.execute(update_query, (value, publisherID))
         conn.commit()
       else:
         print("Invalid choice. Please try again.")
     print("Your publisher info has updated.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
 
@@ -131,23 +129,23 @@ def update_achievemnt(conn):
       if element == "description":
         update_query = """
             UPDATE Achievement
-            SET description = ?
-            WHERE achievementID = ?
+            SET description = %s
+            WHERE achievementID = %s
             """
         cur.execute(update_query, (value, achievement))
         conn.commit()
       elif element == "gameID":
         update_query = """
             UPDATE Achievement
-            SET gameID = ?
-            WHERE achievementID = ?
+            SET gameID = %s
+            WHERE achievementID = %s
           """
         cur.execute(update_query, (value, achievement))
         conn.commit()
       else:
         print("Invalid choice. Please try again.")
     print("Your achievement info has updated.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
 
@@ -156,11 +154,11 @@ def update_category(conn):
     cur = conn.cursor()
     cate = input("Enter a sub category that want to update:")
     value = input("Enter the new main category:")
-    update_query = "UPDATE Category SET mainCate = ?WHERE subCate = ?"
+    update_query = "UPDATE Category SET mainCate = %sWHERE subCate = %s"
     cur.execute(update_query, (value, cate))
     conn.commit()
     print("Your category info has updated.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
 
@@ -175,23 +173,23 @@ def update_community(conn):
       if element == "gameID":
         update_query = """
             UPDATE Community
-            SET gameID = ?
-            WHERE communityID = ?
+            SET gameID = %s
+            WHERE communityID = %s
             """
         cur.execute(update_query, (value, community))
         conn.commit()
       elif element == "dashboardID":
         update_query = """
             UPDATE Community
-            SET dashboardID = ?
-            WHERE communnityID = ?
+            SET dashboardID = %s
+            WHERE communnityID = %s
           """
         cur.execute(update_query, (value, community))
         conn.commit()
       else:
         print("Invalid choice. Please try again.")
     print("Your community info has updated.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
 
@@ -206,31 +204,31 @@ def update_dashboard(conn):
       if element == "post":
         update_query = """
             UPDATE Dashboard
-            SET post = ?
-            WHERE dashboardID = ?
+            SET post = %s
+            WHERE dashboardID = %s
             """
         cur.execute(update_query, (value, dashboard))
         conn.commit()
       elif element == "date":
         update_query = """
             UPDATE Dashboard
-            SET date = ?
-            WHERE dashbardID = ?
+            SET date = %s
+            WHERE dashbardID = %s
           """
         cur.execute(update_query, (value, dashboard))
         conn.commit()
       elif element == "author":
         update_query = """
             UPDATE Dashboard
-            SET author = ?
-            WHERE dashbardID = ?
+            SET author = %s
+            WHERE dashbardID = %s
           """
         cur.execute(update_query, (value, dashboard))
         conn.commit()
       else:
         print("Invalid choice. Please try again.")
     print("Your community info has updated.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
 
@@ -245,37 +243,37 @@ def update_user(conn):
       if element == "name":
         update_query = """
             UPDATE User
-            SET name = ?
-            WHERE userID = ?
+            SET name = %s
+            WHERE userID = %s
             """
         cur.execute(update_query, (value, user))
         conn.commit()
       elif element == "password":
         update_query = """
             UPDATE User
-            SET password = ?
-            WHERE userID = ?
+            SET password = %s
+            WHERE userID = %s
           """
         cur.execute(update_query, (value, user))
         conn.commit()
       elif element == "wishlistID":
         update_query = """
             UPDATE User
-            SET wishlistID = ?
-            WHERE userID = ?
+            SET wishlistID = %s
+            WHERE userID = %s
           """
         cur.execute(update_query, (value, user))
         update_query = """
             UPDATE WishlistUser
-            SET wishlistID = ?
-            WHERE userID = ?
+            SET wishlistID = %s
+            WHERE userID = %s
           """
         cur.execute(update_query, (value, user))
         conn.commit()
       else:
         print("Invalid choice. Please try again.")
     print("Your community info has updated.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
 
