@@ -44,7 +44,7 @@ def insert_game(conn):
       release = input("Enter the release date time of the new game: ")
       # Insert the new game
       insert_query = """
-          INSERT INTO Game(publisherID, gameID, title, mainCate, price, release)
+          INSERT INTO Game(publisherID, gameID, title, mainCate, price, `release`)
           VALUES (%s, %s, %s, %s, %s, %s)
           """
       cur.execute(insert_query, (publisherID,gameID,title,mainCate,price,release))
