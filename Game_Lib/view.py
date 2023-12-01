@@ -86,7 +86,7 @@ def view_gameCate(conn):
   try:
     cur = conn.cursor()
     category = input("Enter a category: ")
-    cur.execute("SELECT * FROM Game WHERE mainCate = %s",(category))
+    cur.execute("SELECT * FROM Game WHERE mainCate = %s",(category,))
     rows = cur.fetchall()
     return rows
   except mysql.connector.Error as e:
