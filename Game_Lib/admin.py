@@ -1,5 +1,5 @@
-import sqlite3
-from Game_Lib.game_lib import *
+import mysql.connector
+from main import *
 from view import view_menu
 from insert import insert_menu
 from delete import delete_menu
@@ -36,5 +36,9 @@ def admin_menu(conn, user_id):
 
 
 if __name__ == '__main__':
-    conn = sqlite3.connect("Data/data.db")
-    admin_menu(conn, "admin")
+    conn = create_connection()
+        if conn:
+            main_menu(conn)
+            conn.close()
+        else:
+            print("Failed to establish a database connection.")
