@@ -69,7 +69,7 @@ def insert_publisher(conn):
 
       # Insert the new publisher
       insert_query = """
-          INSERT INTO Publisher(publisherID, name, year))
+          INSERT INTO Publisher(publisherID, name, year)
           VALUES (%s, %s, %s)
           """
       cur.execute(insert_query, (publisherID,name,year))
@@ -94,7 +94,7 @@ def insert_achievemnt(conn):
 
       # Insert the new achievement
       insert_query = """
-          INSERT INTO Achievement(achievementID, description, gameID))
+          INSERT INTO Achievement(achievementID, description, gameID)
           VALUES (%s, %s, %s)
           """
       cur.execute(insert_query, (achievementID,description,gameID))
@@ -118,7 +118,7 @@ def insert_category(conn):
 
       # Insert the new subcategory
       insert_query = """
-          INSERT INTO Category(subCate, mainCate))
+          INSERT INTO Category(subCate, mainCate)
           VALUES (%s, %s)
           """
       cur.execute(insert_query, (subCate, mainCate))
@@ -144,7 +144,7 @@ def insert_community(conn):
 
       # Insert the new community
       insert_query = """
-          INSERT INTO Community(gameID, communityID, dashboardID))
+          INSERT INTO Community(gameID, communityID, dashboardID)
           VALUES (%s, %s, %s)
           """
       cur.execute(insert_query, (gameID, communityID, dashboardID))
