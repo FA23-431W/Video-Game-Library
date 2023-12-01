@@ -1,5 +1,4 @@
 import mysql.connector
-from main import *
 from view import view_menu
 from insert import insert_menu
 from delete import delete_menu
