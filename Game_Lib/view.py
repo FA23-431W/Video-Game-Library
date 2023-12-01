@@ -115,7 +115,7 @@ def view_sortedGame(conn,user_id):
     elif choice == "2":
       try:
         cur = conn.cursor()
-        cur.execute("SELECT * FROM Game ORDER BY release")
+        cur.execute("SELECT * FROM Game ORDER BY `release`")
         rows = cur.fetchall()
         return rows
       except mysql.connector.Error as e:
