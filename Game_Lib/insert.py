@@ -1,5 +1,4 @@
-import sqlite3
-# from admin import admin_menu
+import mysql.connector
 
 def insert_menu(conn, user_id):
   while True:
@@ -24,7 +23,6 @@ def insert_menu(conn, user_id):
     elif choice == "5":
         insert_community(conn)
     elif choice == "6":
-        # admin_menu(conn, user_id)
         break
     else:
         print("Invalid choice. Please try again.")
@@ -47,14 +45,12 @@ def insert_game(conn):
       # Insert the new game
       insert_query = """
           INSERT INTO Game(publisherID, gameID, title, mainCate, price, release)
-          VALUES (?, ?, ?, ?, ?, ?)
+          VALUES (%s, %s, %s, %s, %s, %s)
           """
       cur.execute(insert_query, (publisherID,gameID,title,mainCate,price,release))
       conn.commit()
       print("Your game has been added.")
-
-
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
       print(f"An error occurred: {e}")
       conn.rollback()  
 
@@ -74,14 +70,12 @@ def insert_publisher(conn):
       # Insert the new publisher
       insert_query = """
           INSERT INTO Publisher(publisherID, name, year))
-          VALUES (?, ?, ?)
+          VALUES (%s, %s, %s)
           """
       cur.execute(insert_query, (publisherID,name,year))
       conn.commit()
       print("Your new publisher has been added.")
-
-
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
       print(f"An error occurred: {e}")
       conn.rollback()  
 
@@ -101,14 +95,12 @@ def insert_achievemnt(conn):
       # Insert the new achievement
       insert_query = """
           INSERT INTO Achievement(achievementID, description, gameID))
-          VALUES (?, ?, ?)
+          VALUES (%s, %s, %s)
           """
       cur.execute(insert_query, (achievementID,description,gameID))
       conn.commit()
       print("Your new achievemnt has been added.")
-
-
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
       print(f"An error occurred: {e}")
       conn.rollback() 
 
@@ -127,14 +119,12 @@ def insert_category(conn):
       # Insert the new subcategory
       insert_query = """
           INSERT INTO Category(subCate, mainCate))
-          VALUES (?, ?)
+          VALUES (%s, %s)
           """
       cur.execute(insert_query, (subCate, mainCate))
       conn.commit()
       print("Your new subcategory has been added.")
-
-
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
       print(f"An error occurred: {e}")
       conn.rollback() 
 
@@ -155,13 +145,11 @@ def insert_community(conn):
       # Insert the new community
       insert_query = """
           INSERT INTO Community(gameID, communityID, dashboardID))
-          VALUES (?, ?, ?)
+          VALUES (%s, %s, %s)
           """
       cur.execute(insert_query, (gameID, communityID, dashboardID))
       conn.commit()
       print("Your new community has been added.")
-
-
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
       print(f"An error occurred: {e}")
       conn.rollback()
