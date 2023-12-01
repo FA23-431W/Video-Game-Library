@@ -1,5 +1,4 @@
-import sqlite3
-# from admin import admin_menu
+import mysql.connector
 
 def delete_menu(conn, user_id):
   while True:
@@ -57,13 +56,13 @@ def delete_game(conn):
   try:
     cur = conn.cursor()
     gameID = input("Enter a gameID that want to delete:")
-    cur.execute("DELETE FROM Game WHERE gameID = ?",(gameID))
-    cur.execute("DELETE FROM Achievement WHERE gameID = ?", (gameID))
-    cur.execute("DELETE FROM Community WHERE gameID = ?",(gameID))
-    cur.execute("DELETE FROM WishlistGame WHERE gameID = ?",(gameID))
+    cur.execute("DELETE FROM Game WHERE gameID = %s",(gameID))
+    cur.execute("DELETE FROM Achievement WHERE gameID = %s", (gameID))
+    cur.execute("DELETE FROM Community WHERE gameID = %s",(gameID))
+    cur.execute("DELETE FROM WishlistGame WHERE gameID = %s",(gameID))
     conn.commit()
     print("Your game has been deleted.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()  
     
@@ -71,10 +70,10 @@ def delete_achievemnt(conn):
   try:
     cur = conn.cursor()
     achievementID = input("Enter a achievementID that want to delete:")
-    cur.execute("DELETE FROM Achievement WHERE achievementID = ?",(achievementID))
+    cur.execute("DELETE FROM Achievement WHERE achievementID = %s",(achievementID))
     conn.commit()
     print("Your achievement has been deleted.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()  
 
@@ -82,11 +81,11 @@ def delete_dashboard(conn):
   try:
     cur = conn.cursor()
     dashboardID = input("Enter a dashboardID that want to delete:")
-    cur.execute("DELETE FROM Dashboard WHERE dashboardID = ?",(dashboardID))
-    cur.execute("UPDATE Community SET dashboardID = NULL WHERE dashboardID = ?",(dashboardID))
+    cur.execute("DELETE FROM Dashboard WHERE dashboardID = %s",(dashboardID))
+    cur.execute("UPDATE Community SET dashboardID = NULL WHERE dashboardID = %s",(dashboardID))
     conn.commit()
     print("Your dashboard has been deleted.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
   
@@ -94,11 +93,11 @@ def delete_publisher(conn):
   try:
     cur = conn.cursor()
     publisherID = input("Enter a publisherID that want to delete:")
-    cur.execute("DELETE FROM Publisher WHERE publisherID = ?",(publisherID))
-    cur.execute("DELETE FROM Game WHERE publisherID = ?", (publisherID))
+    cur.execute("DELETE FROM Publisher WHERE publisherID = %s",(publisherID))
+    cur.execute("DELETE FROM Game WHERE publisherID = %s", (publisherID))
     conn.commit()
     print("Your publisher has been deleted.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -106,10 +105,10 @@ def delete_category(conn):
   try:
     cur = conn.cursor()
     cate = input("Enter a sub category that want to delete:")
-    cur.execute("DELETE FROM Category WHERE subCate = ?",(cate))
+    cur.execute("DELETE FROM Category WHERE subCate = %s",(cate))
     conn.commit()
     print("Your sub category has been deleted.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -117,10 +116,10 @@ def delete_community(conn):
   try:
     cur = conn.cursor()
     communityID = input("Enter a communityID that want to delete:")
-    cur.execute("DELETE FROM Dashboard d INNER JOIN Community c WHERE c.communityID = ? AND c.dashboardID = d.dashboardID",(communityID))
+    cur.execute("DELETE FROM Dashboard d INNER JOIN Community c WHERE c.communityID = %s AND c.dashboardID = d.dashboardID",(communityID))
     conn.commit()
     print("Your community has been deleted.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -128,11 +127,11 @@ def delete_user(conn):
   try:
     cur = conn.cursor()
     userID = input("Enter a userID that want to delete:")
-    cur.execute("DELETE FROM User WHERE userID = ?",(userID))
-    cur.execute("DELETE FROM WishlistUser wu INNER JOIN WishlistGame wg WHERE userID = ? AND wu.wishlistID = wg.wishlistID",(userID))
+    cur.execute("DELETE FROM User WHERE userID = %s",(userID))
+    cur.execute("DELETE FROM WishlistUser wu INNER JOIN WishlistGame wg WHERE userID = %s AND wu.wishlistID = wg.wishlistID",(userID))
     conn.commit()
     print("Your user has been deleted.")
-  except sqlite3.Error as e:
+  except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback() 
 
@@ -159,7 +158,7 @@ def delete_table(conn,user_id):
           cur.execute("ALTER TABLE Community DROP COLUMN gameID")
           conn.commit()
           print("Your game table has been deleted.")
-        except sqlite3.Error as e:
+        except mysql.connector.Error as e:
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "2":
@@ -169,7 +168,7 @@ def delete_table(conn,user_id):
           cur.execute("ALTER TABLE Game DROP COLUMN publisherID")
           conn.commit()
           print("Your publisher table has been deleted.")
-        except sqlite3.Error as e:
+        except mysql.connector.Error as e:
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "3":
@@ -178,7 +177,7 @@ def delete_table(conn,user_id):
           cur.execute("DROP TABLE Achievement")
           conn.commit()
           print("Your Achievement table has been deleted.")
-        except sqlite3.Error as e:
+        except mysql.connector.Error as e:
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "4":
@@ -187,7 +186,7 @@ def delete_table(conn,user_id):
           cur.execute("DROP TABLE Category")
           conn.commit()
           print("Your category table has been deleted.")
-        except sqlite3.Error as e:
+        except mysql.connector.Error as e:
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "5":
@@ -196,7 +195,7 @@ def delete_table(conn,user_id):
           cur.execute("DROP TABLE Community")
           conn.commit()
           print("Your community table has been deleted.")
-        except sqlite3.Error as e:
+        except mysql.connector.Error as e:
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "6":
@@ -206,7 +205,7 @@ def delete_table(conn,user_id):
           cur.execute("ALTER TABLE Community DROP COLUMN dashboardID")
           conn.commit()
           print("Your dahsboard table has been deleted.")
-        except sqlite3.Error as e:
+        except mysql.connector.Error as e:
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "7":
@@ -216,7 +215,7 @@ def delete_table(conn,user_id):
           cur.execute("ALTER TABLE WishlistUser DROP COLUMN userID")
           conn.commit()
           print("Your User table has been deleted.")
-        except sqlite3.Error as e:
+        except mysql.connector.Error as e:
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "8":
@@ -227,7 +226,7 @@ def delete_table(conn,user_id):
           cur.execute("ALTER TABLE User DROP COLUMN wishlistID")
           conn.commit()
           print("Your Wishlist table has been deleted.")
-        except sqlite3.Error as e:
+        except mysql.connector.Error as e:
           print(f"An error occurred: {e}")
           conn.rollback() 
       elif choice == "9":
