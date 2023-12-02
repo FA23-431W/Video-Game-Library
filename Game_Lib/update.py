@@ -36,7 +36,9 @@ def update_game(conn):
   try:
     cur = conn.cursor()
     gameID = input("Enter a gameID that want to update:")
-    num = input("Enter the number of elements of the game that want to update:")
+    num = input("Enter the number of elements of the game that want to update(1-5):")
+    if int(num) > 5:
+      print("Invalid choice. Please try again.")
     for i in range(int(num)):
       element = input("Enter the element that want to update (publisherID, title, mainCate, price, release):")
       value = input("Enter the new value:")
@@ -91,7 +93,9 @@ def update_publisher(conn):
   try:
     cur = conn.cursor()
     publisherID = input("Enter a publisherID that want to update:")
-    num = input("Enter the number of elements of the publisher that want to update:")
+    num = input("Enter the number of elements of the publisher that want to update(1-2):")
+    if int(num) > 2:
+      print("Invalid choice. Please try again.")
     for i in range(int(num)):
       element = input("Enter the element that want to update (name, year):")
       value = input("Enter the new value:")
@@ -122,7 +126,9 @@ def update_achievemnt(conn):
   try:
     cur = conn.cursor()
     achievement = input("Enter a AchievementID that want to update:")
-    num = input("Enter the number of elements of the achievement that want to update:")
+    num = input("Enter the number of elements of the achievement that want to update(1-2):")
+    if int(num) > 2:
+      print("Invalid choice. Please try again.")
     for i in range(int(num)):
       element = input("Enter the element that want to update (description, gameID):")
       value = input("Enter the new value:")
@@ -152,7 +158,7 @@ def update_achievemnt(conn):
 def update_category(conn):
   try:
     cur = conn.cursor()
-    cate = input("Enter a sub category that want to update:")
+    cate = input("Enter a sub category that want to update(MMORPG, FPS, RPG, Strategy, Sports, Adventure, Simulation, Puzzle, Action, Casual):")
     value = input("Enter the new main category:")
     update_query = "UPDATE Category SET mainCate = %sWHERE subCate = %s"
     cur.execute(update_query, (value, cate))
@@ -166,7 +172,9 @@ def update_community(conn):
   try:
     cur = conn.cursor()
     community = input("Enter a community that want to update:")
-    num = input("Enter the number of elements of the community that want to update:")
+    num = input("Enter the number of elements of the community that want to update(1-2):")
+    if int(num) > 2:
+      print("Invalid choice. Please try again.")
     for i in range(int(num)):
       element = input("Enter the element that want to update (gameID, dashboardID):")
       value = input("Enter the new value:")
@@ -182,7 +190,7 @@ def update_community(conn):
         update_query = """
             UPDATE Community
             SET dashboardID = %s
-            WHERE communnityID = %s
+            WHERE communityID = %s
           """
         cur.execute(update_query, (value, community))
         conn.commit()
@@ -197,7 +205,9 @@ def update_dashboard(conn):
   try:
     cur = conn.cursor()
     dashboard = input("Enter a dashboard that want to update:")
-    num = input("Enter the number of elements of the dahsboard that want to update:")
+    num = input("Enter the number of elements of the dahsboard that want to update(1-3):")
+    if int(num) > 3:
+      print("Invalid choice. Please try again.")
     for i in range(int(num)):
       element = input("Enter the element that want to update (post, date, author):")
       value = input("Enter the new value:")
@@ -213,7 +223,7 @@ def update_dashboard(conn):
         update_query = """
             UPDATE Dashboard
             SET date = %s
-            WHERE dashbardID = %s
+            WHERE dashboardID = %s
           """
         cur.execute(update_query, (value, dashboard))
         conn.commit()
@@ -221,13 +231,13 @@ def update_dashboard(conn):
         update_query = """
             UPDATE Dashboard
             SET author = %s
-            WHERE dashbardID = %s
+            WHERE dashboardID = %s
           """
         cur.execute(update_query, (value, dashboard))
         conn.commit()
       else:
         print("Invalid choice. Please try again.")
-    print("Your community info has updated.")
+    print("Your dashboard info has updated.")
   except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
@@ -236,7 +246,9 @@ def update_user(conn):
   try:
     cur = conn.cursor()
     user = input("Enter a user that want to update:")
-    num = input("Enter the number of elements of the user that want to update:")
+    num = input("Enter the number of elements of the user that want to update(1-3):")
+    if int(num) > 3:
+      print("Invalid choice. Please try again.")
     for i in range(int(num)):
       element = input("Enter the element that want to update (name,password,wishlistID):")
       value = input("Enter the new value:")
@@ -258,13 +270,13 @@ def update_user(conn):
         conn.commit()
       elif element == "wishlistID":
         update_query = """
-            UPDATE User
+            UPDATE WishlistUser
             SET wishlistID = %s
             WHERE userID = %s
           """
         cur.execute(update_query, (value, user))
         update_query = """
-            UPDATE WishlistUser
+            UPDATE User
             SET wishlistID = %s
             WHERE userID = %s
           """
@@ -272,7 +284,7 @@ def update_user(conn):
         conn.commit()
       else:
         print("Invalid choice. Please try again.")
-    print("Your community info has updated.")
+    print("Your user info has updated.")
   except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
     conn.rollback()
