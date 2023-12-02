@@ -83,6 +83,7 @@ def update_game(conn):
         cur.execute(update_query, (value, gameID))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your game info has updated.")
   except mysql.connector.Error as e:
@@ -116,6 +117,7 @@ def update_publisher(conn):
         cur.execute(update_query, (value, publisherID))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your publisher info has updated.")
   except mysql.connector.Error as e:
@@ -149,6 +151,7 @@ def update_achievemnt(conn):
         cur.execute(update_query, (value, achievement))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your achievement info has updated.")
   except mysql.connector.Error as e:
@@ -171,14 +174,14 @@ def update_category(conn):
 def update_community(conn):
   try:
     cur = conn.cursor()
-    community = input("Enter a community that want to update:")
+    community = input("Enter a communityID that want to update:")
     element = input("Enter the gameID for the community that want to update:")
     update_query = """
         UPDATE Community
         SET gameID = %s
         WHERE communityID = %s
         """
-    cur.execute(update_query, (value, community))
+    cur.execute(update_query, (element, community))
     conn.commit()
     print("Your community info has updated.")
   except mysql.connector.Error as e:
@@ -228,6 +231,7 @@ def update_dashboard(conn):
         cur.execute(update_query, (value, dashboard))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your dashboard info has updated.")
   except mysql.connector.Error as e:
@@ -275,6 +279,7 @@ def update_user(conn):
         cur.execute(update_query, (value, user))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your user info has updated.")
   except mysql.connector.Error as e:
