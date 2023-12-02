@@ -416,7 +416,7 @@ def view_specificDash(conn):
   try:
     cur = conn.cursor()
     communityID = input("Enter a communityID:")
-    cur.execute("SELECT * FROM Community c, Dashboard d WHERE c.communityID = %s AND c.dashboardID = d.dashboardID",(communityID,))
+    cur.execute("SELECT * FROM Dashboard d WHERE d.communityID = %s",(communityID,))
     rows = cur.fetchall()
     return rows
   except mysql.connector.Error as e:
