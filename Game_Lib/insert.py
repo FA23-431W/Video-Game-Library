@@ -144,10 +144,10 @@ def insert_community(conn):
 
       # Insert the new community
       insert_query = """
-          INSERT INTO Community(gameID, communityID)
+          INSERT INTO Community(communityID, gameID)
           VALUES (%s, %s)
           """
-      cur.execute(insert_query, (gameID, communityID))
+      cur.execute(insert_query, (communityID,gameID))
       conn.commit()
       print("Your new community has been added.")
   except mysql.connector.Error as e:
