@@ -5,6 +5,7 @@ from delete import delete_menu
 from update import update_menu
 from alter import alter_menu
 
+
 def admin_menu(conn, user_id):
     while True:
         print("\n----------- Admin Menu -----------")
@@ -37,7 +38,7 @@ def admin_menu(conn, user_id):
 if __name__ == '__main__':
     conn = create_connection()
     if conn:
-    	main_menu(conn)
-    	conn.close()
+        main_menu(conn)
+        conn.close()
     else:
         print("Failed to establish a database connection.")

@@ -35,73 +35,70 @@ def create_connection():
 # and also add comments to the dashborad
 
 def fetch_posts(conn, game_id):
-    """
-    Fetch and display dashboard posts for a specific game.
-
-    :param conn: Database connection object
-    :param game_id: The ID of the game
-    """
-
     try:
-        cur = conn.cursor()
+        cur = conn.cursor(buffered=True)
+
+        # Updated SQL query
         query = """
         SELECT d.post, d.date, d.Author
         FROM Dashboard d
-        JOIN Community c ON d.dashboardID = c.dashboardID
+        JOIN Community c ON d.communityID = c.communityID
         WHERE c.gameID = %s
         ORDER BY d.date DESC
         """
+
         cur.execute(query, (game_id,))
         posts = cur.fetchall()
-
+        cur.close()
         if posts:
-            print("\n--- Game Community Dashboard ---")
+            print("\n--- Community Posts ---")
             for post in posts:
-                print(f"Date: {post[1]}, Author: {post[2]}\nPost: {post[0]}\n")
+                print(f"Date: {post[1]}, Author: {post[2]}")
+                print(post[0])
+                print("-" * 50)
         else:
             print("No posts found for this game.")
 
     except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
+    finally:
+        cur.close()  # Close the cursor in the finally block
+
+import mysql.connector
+from datetime import datetime
+
+import mysql.connector
+from datetime import datetime
 
 
-def add_comment_to_dashboard(conn, game_id, user_id):
-    """
-    Allow the user to add a comment to the dashboard for a specific game.
-
-    :param conn: Database connection object
-    :param game_id: The ID of the game
-    :param user_id: The ID of the user
-    """
+def add_comment_to_dashboard(conn, game_id, author_name):
     try:
-        # Fetch the dashboardID for this game
-        cur = conn.cursor()
-        query = "SELECT dashboardID FROM Community WHERE gameID = %s"
-        cur.execute(query, (game_id,))
-        result = cur.fetchone()
+        with conn.cursor() as cur:
+            # Check for existing community for the game
+            cur.execute("SELECT communityID FROM Community WHERE gameID = %s", (game_id,))
+            community_result = cur.fetchone()
 
-        if result:
-            dashboard_id = result[0]
+            # If no community exists, create one
+            if not community_result:
+                cur.execute("INSERT INTO Community (gameID) VALUES (%s)", (game_id,))
+                conn.commit()  # Commit the new community creation
+                community_id = cur.lastrowid  # Get the new community ID
+            else:
+                community_id = community_result[0]
 
+            # Prompt for user comment
             post = input("Enter your comment: ")
-            date = datetime.now().strftime("%m-%d-%Y")   # Replace with your date handling as needed
-            author = user_id  # Replace with actual author identifier
+            date = datetime.now().strftime("%Y-%m-%d")
 
-            # Insert the new comment
-            insert_query = """
-            INSERT INTO Dashboard (dashboardID, post, date, Author)
-            VALUES (%s, %s, %s, %s)
-            """
-            cur.execute(insert_query, (dashboard_id, post, date, author))
+            # Add the comment to the Dashboard
+            cur.execute("INSERT INTO Dashboard (post, date, Author, communityID) VALUES (%s, %s, %s, %s)",
+                        (post, date, author_name, community_id))
             conn.commit()
             print("Your comment has been added.")
-
-        else:
-            print("No dashboard found for this game.")
-
     except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
-        conn.rollback()  # Rollback any changes if there's an error
+        conn.rollback()
+
 
 
 def goto_community(conn, game_id, user_id):
@@ -112,9 +109,9 @@ def goto_community(conn, game_id, user_id):
     :param game_id: The ID of the game
     :param user_id: The ID of the user
     """
-    fetch_posts(conn, game_id)  # Display existing posts
 
     while True:
+        fetch_posts(conn, game_id)  # Display existing posts
         print("\nCommunity Options:")
         print("1. Add Comment")
         print("2. Return to Game Library")
@@ -152,6 +149,7 @@ def see_game_details(conn, game_id, user_id):
 
         cur.execute(query, (game_id,))
         game_details = cur.fetchone()
+        cur.close
 
         if game_details:
             while True:
@@ -183,3 +181,5 @@ def see_game_details(conn, game_id, user_id):
 
     except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
+    finally:
+        cur.close()  # Close the cursor in the finally block

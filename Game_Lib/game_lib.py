@@ -1,4 +1,9 @@
 from util import *
+from datetime import datetime
+
+
+def convert_to_datetime(date_str):
+    return datetime.strptime(date_str, '%m/%d/%Y')
 
 
 def sort_games(games_list):
@@ -8,6 +13,7 @@ def sort_games(games_list):
     :param games_list: List of games, each game is a tuple (gameID, Title, mainCate, price, release)
     :return: Sorted list of games
     """
+    print("\n--- Sort Games ---")
     print("\n--- Sort Games ---")
     print("1. Sort by Name")
     print("2. Sort by Price")
@@ -23,7 +29,7 @@ def sort_games(games_list):
         sorted_games = sorted(games_list, key=lambda x: float(x[3]))  # x[3] is the Price
     elif choice == "3":
         # Sort by Release Date
-        sorted_games = sorted(games_list, key=lambda x: x[4])  # x[4] is the Release Date
+        sorted_games = sorted(games_list, key=lambda x: convert_to_datetime(x[4]))
     else:
         print("Invalid choice. Please try again.")
         return games_list
@@ -33,7 +39,7 @@ def sort_games(games_list):
     pass
 
 
-def show_gamelist(game_list, user_id):
+def show_gamelist(conn, game_list, user_id):
     """
        This function receive a list of games in the format of
        gameID | Title | mainCate | price | release 
@@ -69,7 +75,7 @@ def show_gamelist(game_list, user_id):
 def get_games_from_cata(conn, category):
     try:
         cur = conn.cursor()
-        query = "SELECT gameID, Title, mainCate, price, release FROM Game WHERE mainCate = %s"
+        query = "SELECT gameID, Title, mainCate, price, `release` FROM Game WHERE mainCate = %s"
         cur.execute(query, (category,))
         games = cur.fetchall()
 
@@ -143,7 +149,7 @@ def browse_by_category(conn, user_id):
             choice = int(input("\nEnter the number of the category to browse: ")) - 1
             if 0 <= choice < len(categories):
                 game_list = get_games_from_cata(conn, categories[choice])
-                show_gamelist(game_list, user_id)
+                show_gamelist(conn, game_list, user_id)
 
             else:
                 print("Invalid choice. Please enter a valid number.")
@@ -156,7 +162,6 @@ def browse_by_category(conn, user_id):
 def show_all_games(conn, user_id):
     print("\nAll Games:")
     game_list = get_all_games(conn)
-    display_game_list(game_list)
 
     while True:
         display_game_list(game_list)
@@ -167,7 +172,7 @@ def show_all_games(conn, user_id):
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            sort_games(game_list)  # Implement this to sort games
+            game_list = sort_games(game_list)  # Implement this to sort games
         elif choice == "2":
             game_id = input("Enter Game ID to view details: ")
             see_game_details(conn, game_id, user_id)
