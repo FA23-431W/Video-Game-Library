@@ -54,10 +54,10 @@ def delete_game(conn):
   try:
     cur = conn.cursor()
     gameID = input("Enter a gameID that want to delete:")
-    cur.execute("DELETE FROM Game WHERE gameID = %s",(gameID))
-    cur.execute("DELETE FROM Achievement WHERE gameID = %s", (gameID))
-    cur.execute("DELETE FROM Community WHERE gameID = %s",(gameID))
-    cur.execute("DELETE FROM WishlistGame WHERE gameID = %s",(gameID))
+    cur.execute("DELETE FROM Achievement WHERE gameID = %s", (gameID,))
+    cur.execute("DELETE FROM Community WHERE gameID = %s",(gameID,))
+    cur.execute("DELETE FROM WishlistGame WHERE gameID = %s",(gameID,))
+    cur.execute("DELETE FROM Game WHERE gameID = %s",(gameID,))
     conn.commit()
     print("Your game has been deleted.")
   except mysql.connector.Error as e:
@@ -68,7 +68,7 @@ def delete_achievemnt(conn):
   try:
     cur = conn.cursor()
     achievementID = input("Enter a achievementID that want to delete:")
-    cur.execute("DELETE FROM Achievement WHERE achievementID = %s",(achievementID))
+    cur.execute("DELETE FROM Achievement WHERE achievementID = %s",(achievementID,))
     conn.commit()
     print("Your achievement has been deleted.")
   except mysql.connector.Error as e:
@@ -79,8 +79,8 @@ def delete_dashboard(conn):
   try:
     cur = conn.cursor()
     dashboardID = input("Enter a dashboardID that want to delete:")
-    cur.execute("DELETE FROM Dashboard WHERE dashboardID = %s",(dashboardID))
-    cur.execute("UPDATE Community SET dashboardID = NULL WHERE dashboardID = %s",(dashboardID))
+    cur.execute("UPDATE Community SET dashboardID = NULL WHERE dashboardID = %s",(dashboardID,))
+    cur.execute("DELETE FROM Dashboard WHERE dashboardID = %s",(dashboardID,))
     conn.commit()
     print("Your dashboard has been deleted.")
   except mysql.connector.Error as e:
@@ -91,8 +91,8 @@ def delete_publisher(conn):
   try:
     cur = conn.cursor()
     publisherID = input("Enter a publisherID that want to delete:")
-    cur.execute("DELETE FROM Publisher WHERE publisherID = %s",(publisherID))
-    cur.execute("DELETE FROM Game WHERE publisherID = %s", (publisherID))
+    cur.execute("UPDATE Game SET publisherID = NULL WHERE publisherID = %s", (publisherID,))
+    cur.execute("DELETE FROM Publisher WHERE publisherID = %s",(publisherID,))
     conn.commit()
     print("Your publisher has been deleted.")
   except mysql.connector.Error as e:
@@ -103,7 +103,7 @@ def delete_category(conn):
   try:
     cur = conn.cursor()
     cate = input("Enter a sub category that want to delete:")
-    cur.execute("DELETE FROM Category WHERE subCate = %s",(cate))
+    cur.execute("DELETE FROM Category WHERE subCate = %s",(cate,))
     conn.commit()
     print("Your sub category has been deleted.")
   except mysql.connector.Error as e:
@@ -114,7 +114,7 @@ def delete_community(conn):
   try:
     cur = conn.cursor()
     communityID = input("Enter a communityID that want to delete:")
-    cur.execute("DELETE FROM Dashboard d INNER JOIN Community c WHERE c.communityID = %s AND c.dashboardID = d.dashboardID",(communityID))
+    cur.execute("DELETE FROM Community c WHERE c.communityID = %s",(communityID,))
     conn.commit()
     print("Your community has been deleted.")
   except mysql.connector.Error as e:
@@ -125,8 +125,8 @@ def delete_user(conn):
   try:
     cur = conn.cursor()
     userID = input("Enter a userID that want to delete:")
-    cur.execute("DELETE FROM User WHERE userID = %s",(userID))
-    cur.execute("DELETE FROM WishlistUser wu INNER JOIN WishlistGame wg WHERE userID = %s AND wu.wishlistID = wg.wishlistID",(userID))
+    cur.execute("DELETE FROM WishlistUser WHERE userID = %s",(userID,))
+    cur.execute("DELETE FROM User WHERE userID = %s",(userID,))
     conn.commit()
     print("Your user has been deleted.")
   except mysql.connector.Error as e:
