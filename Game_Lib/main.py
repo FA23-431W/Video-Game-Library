@@ -1,5 +1,5 @@
 from user import user_menu
-# from admin import admin_menu
+from admin import admin_menu
 from util import *
 
 def login(conn, username, password):
@@ -55,7 +55,7 @@ def main_menu(conn):
                 # Check if the user is admin
                 # !! this is a temp, after implementing admin functionality, use adminid to check
                 if name == "admin":
-                    # admin_menu(conn, user_id)
+                    admin_menu(conn, user_id)
                     pass
                 else:
                     user_menu(conn, user_id)
