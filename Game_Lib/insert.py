@@ -140,14 +140,14 @@ def insert_community(conn):
 
       gameID = input("Enter the gameID that is related to the new community: ")
       communityID = input("Enter the new communityID: ")
-      dashboardID = input("Enter the new communityID's dashboardID: ")
+      #dashboardID = input("Enter the new communityID's dashboardID: ")
 
       # Insert the new community
       insert_query = """
-          INSERT INTO Community(gameID, communityID, dashboardID)
-          VALUES (%s, %s, %s)
+          INSERT INTO Community(gameID, communityID)
+          VALUES (%s, %s)
           """
-      cur.execute(insert_query, (gameID, communityID, dashboardID))
+      cur.execute(insert_query, (gameID, communityID))
       conn.commit()
       print("Your new community has been added.")
   except mysql.connector.Error as e:
