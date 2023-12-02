@@ -13,8 +13,8 @@ def admin_menu(conn, user_id):
         print("2. Insert")
         print("3. Delete")
         print("4. Update")
-        print("5. Alter Table")
-        print("6. Logout")
+        #print("5. Alter Table")
+        print("5. Logout")
         print("----------- Admin Menu ------------")
         choice = input("Enter your choice: ")
 
@@ -26,9 +26,9 @@ def admin_menu(conn, user_id):
             delete_menu(conn, user_id)
         elif choice == "4":
             update_menu(conn, user_id)
+        #elif choice == "5":
+            #alter_menu(conn, user_id)
         elif choice == "5":
-            alter_menu(conn, user_id)
-        elif choice == "6":
             print("Logout")
             break
         else:
