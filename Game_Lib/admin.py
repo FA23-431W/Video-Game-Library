@@ -3,10 +3,7 @@ from view import view_menu
 from insert import insert_menu
 from delete import delete_menu
 from update import update_menu
-<<<<<<< HEAD
-=======
 from util import create_connection
->>>>>>> 04a4a3d (implement add to wishlist function)
 #from alter import alter_menu
 
 
