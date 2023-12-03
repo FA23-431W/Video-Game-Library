@@ -61,7 +61,7 @@ def delete_dashboard(conn):
   try:
     cur = conn.cursor()
     dashboardID = input("Enter a dashboardID that want to delete:")
-    #cur.execute("UPDATE Community SET dashboardID = NULL WHERE dashboardID = %s",(dashboardID,))
+    cur.execute("UPDATE Community SET dashboardID = NULL WHERE dashboardID = %s",(dashboardID,))
     cur.execute("DELETE FROM Dashboard WHERE dashboardID = %s",(dashboardID,))
     conn.commit()
     print("Your dashboard has been deleted.")

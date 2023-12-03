@@ -1,5 +1,5 @@
 import sqlite3
-from game_lib import *
+from Game_Lib.game_lib import *
 from wishlist import *
 from util import *
 

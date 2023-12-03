@@ -3,6 +3,40 @@ import mysql.connector
 from datetime import datetime
 
 
+def add_wishlist(conn, game_id, user_id):
+    try:
+        cur = conn.cursor()
+
+        # Step 1: Insert into WishlistUser (if not already there)
+        cur.execute("SELECT wishlistID FROM WishlistUser WHERE userID = %s", (user_id,))
+        result = cur.fetchone()
+        if not result:
+            # Create new WishlistUser entry
+            cur.execute("INSERT INTO WishlistUser (userID) VALUES (%s)", (user_id,))
+            wishlist_id = cur.lastrowid
+        else:
+            wishlist_id = result[0]
+
+        # Step 2: Check if the game is already in the wishlist
+        cur.execute("SELECT * FROM WishlistGame WHERE wishlistID = %s AND gameID = %s", (wishlist_id, game_id))
+        if cur.fetchone():
+            print("Game already in wishlist.")
+            return
+
+        # Step 3: Insert the game into the WishlistGame
+        cur.execute("INSERT INTO WishlistGame (wishlistID, gameID) VALUES (%s, %s)", (wishlist_id, game_id))
+        conn.commit()
+        print("Game added to wishlist successfully.")
+        input("Press Any Key to Return")
+
+    except mysql.connector.Error as e:
+        print(f"An error occurred: {e}")
+        conn.rollback()
+
+
+
+
+
 def display_game_list(game_info):
     if game_info:
         header = "{:<8} | {:<40} | {:<15} | {:<10} | {:<15}"
@@ -38,31 +72,31 @@ def fetch_posts(conn, game_id):
     try:
         cur = conn.cursor(buffered=True)
 
-        # Updated SQL query
+        # SQL query updated to order by date in ascending order
         query = """
         SELECT d.post, d.date, d.Author
         FROM Dashboard d
         JOIN Community c ON d.communityID = c.communityID
         WHERE c.gameID = %s
-        ORDER BY d.date DESC
+        ORDER BY d.date ASC  -- Order by date in ascending order
         """
 
         cur.execute(query, (game_id,))
         posts = cur.fetchall()
         cur.close()
+
         if posts:
             print("\n--- Community Posts ---")
             for post in posts:
-                print(f"Date: {post[1]}, Author: {post[2]}")
-                print(post[0])
+                # Enhanced formatting for the output
+                print(f"Date: {post[1]} | Author: {post[2]}")
+                print(f"Post: {post[0]}")
                 print("-" * 50)
         else:
             print("No posts found for this game.")
 
     except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
-    finally:
-        cur.close()  # Close the cursor in the finally block
 
 import mysql.connector
 from datetime import datetime
@@ -100,7 +134,6 @@ def add_comment_to_dashboard(conn, game_id, author_name):
         conn.rollback()
 
 
-
 def goto_community(conn, game_id, user_id):
     """
     Lead user to the community page for a specific game.
@@ -127,29 +160,36 @@ def goto_community(conn, game_id, user_id):
 
 
 def see_game_details(conn, game_id, user_id):
-    """
-    Display details of a certain game, including the number of users who added it to their wishlist.
-    The user should be able to access the game's community or return to the previous page.
 
-    :param conn: Database connection object
-    :param game_id: The ID of the game to view details
-    """
     try:
         cur = conn.cursor()
 
-        # SQL query to fetch game details and the count of users who added the game to their wishlist
+        # SQL query to fetch game details
         query = """
-        SELECT g.gameID, g.Title, p.name, g.mainCate, g.price, g.release, COUNT(wg.gameID)
+        SELECT g.gameID, g.Title, p.name, g.mainCate, g.price, g.release
         FROM Game g
         LEFT JOIN Publisher p ON g.publisherID = p.publisherID
-        LEFT JOIN WishlistGame wg ON g.gameID = wg.gameID
         WHERE g.gameID = %s
-        GROUP BY g.gameID
         """
-
         cur.execute(query, (game_id,))
         game_details = cur.fetchone()
-        cur.close
+
+        # Query to count the number of users who added the game to their wishlist
+        wishlist_count_query = """
+        SELECT COUNT(*) FROM WishlistGame WHERE gameID = %s
+        """
+        cur.execute(wishlist_count_query, (game_id,))
+        wishlist_count = cur.fetchone()[0]
+
+        # Query to count the number of posts in the game's community
+        posts_count_query = """
+        SELECT COUNT(*) FROM Dashboard WHERE communityID IN 
+        (SELECT communityID FROM Community WHERE gameID = %s)
+        """
+        cur.execute(posts_count_query, (game_id,))
+        posts_count = cur.fetchone()[0]
+
+        cur.close()
 
         if game_details:
             while True:
@@ -160,7 +200,8 @@ def see_game_details(conn, game_id, user_id):
                 print(f"Category       : {game_details[3]}")
                 print(f"Price          : ${game_details[4]:.2f}")  # Assuming price is a float
                 print(f"Release Date   : {game_details[5]}")
-                print(f"Users Interested: {game_details[6]}")
+                print(f"Users Interested: {wishlist_count}")
+                print(f"Community Posts: {posts_count}")
                 print("**********************************\n")
 
                 print("1. Go to Community")
@@ -182,4 +223,6 @@ def see_game_details(conn, game_id, user_id):
     except mysql.connector.Error as e:
         print(f"An error occurred: {e}")
     finally:
-        cur.close()  # Close the cursor in the finally block
+        if cur is not None:
+            cur.close()  # Ensure the cursor is closed
+

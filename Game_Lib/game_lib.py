@@ -57,7 +57,8 @@ def show_gamelist(conn, game_list, user_id):
         print("\n--- Game Library Options ---")
         print("1. Sort By")
         print("2. View Certain Game")
-        print("3. Return to Game Library Menu")
+        print("3. Add Game to wishlist")
+        print("4. Return to Game Library Menu")
 
         choice = input("Enter your choice: ")
 
@@ -67,6 +68,9 @@ def show_gamelist(conn, game_list, user_id):
             game_id = input("Enter Game ID to view details: ")
             see_game_details(conn, game_id, user_id)  # Use the already implemented function
         elif choice == "3":
+            game_id = input("Enter Game ID to add into wishlist: ")
+            add_wishlist(conn, game_id, user_id)
+        elif choice == "4":
             break  # Return to the previous menu
         else:
             print("Invalid choice. Please try again.")
@@ -167,7 +171,8 @@ def show_all_games(conn, user_id):
         display_game_list(game_list)
         print("\n1. Sort Games")
         print("2. View Certain Game")
-        print("3. Return")
+        print("3. Add Game to wishlist")
+        print("4. Return")
 
         choice = input("Enter your choice: ")
 
@@ -176,7 +181,10 @@ def show_all_games(conn, user_id):
         elif choice == "2":
             game_id = input("Enter Game ID to view details: ")
             see_game_details(conn, game_id, user_id)
-        elif choice == "3":
+        elif choice == '3':
+            game_id = input("Enter Game ID to add into wishlist: ")
+            add_wishlist(conn, game_id, user_id)
+        elif choice == "4":
             break
         else:
             print("Invalid choice. Please try again.")

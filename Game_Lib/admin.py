@@ -3,6 +3,10 @@ from view import view_menu
 from insert import insert_menu
 from delete import delete_menu
 from update import update_menu
+<<<<<<< HEAD
+=======
+from util import create_connection
+>>>>>>> 04a4a3d (implement add to wishlist function)
 #from alter import alter_menu
 
 
@@ -38,7 +42,7 @@ def admin_menu(conn, user_id):
 if __name__ == '__main__':
     conn = create_connection()
     if conn:
-        main_menu(conn)
+        admin_menu(conn,0)
         conn.close()
     else:
         print("Failed to establish a database connection.")

@@ -1,10 +1,16 @@
-from user import user_menu
 from admin import admin_menu
+from user import user_menu
 from util import *
 
+
 def login(conn, username, password):
-    username = "ggallager1"
-    password = 'vF9=Qm"lJG'
+    print(username)
+    print(password)
+
+    # Check if both username and password are empty
+    if username == '' and password == '':
+        username = "ggallager1"
+        password = 'vF9=Qm"lJG'
 
     """
     Login function to authenticate a user and return their userID.
@@ -31,8 +37,6 @@ def login(conn, username, password):
         return None
 
 
-
-
 # Update your main_menu function to use the MySQL connection
 def main_menu(conn):
     while True:
@@ -53,7 +57,6 @@ def main_menu(conn):
                 print("Login successful!\n")
                 print("Welcome {} ! \nUser ID: {}".format(name, user_id))
                 # Check if the user is admin
-                # !! this is a temp, after implementing admin functionality, use adminid to check
                 if name == "admin":
                     admin_menu(conn, user_id)
                     pass

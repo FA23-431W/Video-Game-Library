@@ -1,5 +1,9 @@
 userID,name,password,wishlistID
+<<<<<<< HEAD
 0,admin,1234566789,0
+=======
+0,admin,123456,0
+>>>>>>> 04a4a3d (implement add to wishlist function)
 1,pmackartan0,oW6'OTB',194
 2,ggallager1,"vF9=Qm""lJG",106
 3,bpetrakov2,mI8.`A4IA0,123

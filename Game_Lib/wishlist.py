@@ -2,41 +2,42 @@ from util import *
 
 
 def remove_game_from_wishlist(conn, user_id, game_id):
-    """
-    Remove a specific game from a user's wishlist. If the wishlist becomes empty, update the User table accordingly.
-
-    :param conn: Database connection object
-    :param user_id: The ID of the user
-    :param game_id: The ID of the game to be removed
-    """
     try:
         cur = conn.cursor()
 
+        # Check if the game is in the user's wishlist
+        cur.execute("""
+            SELECT * FROM WishlistGame
+            WHERE wishlistID = (
+                SELECT wishlistID FROM WishlistUser WHERE userID = %s
+            ) AND gameID = %s
+        """, (user_id, game_id))
+        if not cur.fetchone():
+            print(f"Game with ID {game_id} is not in the user's wishlist.")
+            return
+
         # Step 1: Remove the game from the WishlistGame table
         delete_query = """
-        DELETE FROM WishlistGame
-        WHERE wishlistID = (
-            SELECT wishlistID FROM User WHERE userID = %s
-        )
-        AND gameID = %s
+            DELETE FROM WishlistGame
+            WHERE wishlistID = (
+                SELECT wishlistID FROM WishlistUser WHERE userID = %s
+            ) AND gameID = %s
         """
         cur.execute(delete_query, (user_id, game_id))
 
         # Step 2: Check if the wishlist is now empty, and update the User table if necessary
         check_query = """
-        SELECT COUNT(*) FROM WishlistGame
-        WHERE wishlistID = (
-            SELECT wishlistID FROM User WHERE userID = %s
-        )                   
+            SELECT COUNT(*) FROM WishlistGame
+            WHERE wishlistID = (
+                SELECT wishlistID FROM WishlistUser WHERE userID = %s
+            )
         """
         cur.execute(check_query, (user_id,))
         count = cur.fetchone()[0]
 
         if count == 0:
-            # If the wishlist is empty, update the User table (e.g., set wishlistID to NULL or a default value)
-            update_query = """
-            UPDATE User SET wishlistID = NULL WHERE userID = %s
-            """
+            # If the wishlist is empty, update the User table
+            update_query = "UPDATE User SET wishlistID = NULL WHERE userID = %s"
             cur.execute(update_query, (user_id,))
 
         conn.commit()
@@ -55,10 +56,10 @@ def wishlist_menu(conn, user_id):
         query = """
             SELECT g.gameID, g.Title, g.mainCate, g.price, g.release
             FROM User u
-            JOIN WishlistGame wg ON u.wishlistID = wg.wishlistID
+            JOIN WishlistUser wu ON u.userID = wu.userID
+            JOIN WishlistGame wg ON wu.wishlistID = wg.wishlistID
             JOIN Game g ON wg.gameID = g.gameID
-            WHERE u.userID = %s
-
+            WHERE u.userID = %s;
                """
         cur = conn.cursor()
         cur.execute(query, (user_id,))  # Pass the wishlist_id to the query
@@ -95,7 +96,7 @@ def wishlist_menu(conn, user_id):
 if __name__ == '__main__':
     conn = create_connection()
     if conn:
-        wishlist_menu(conn,977)
+        wishlist_menu(conn, 977)
         conn.close()
     else:
         print("Failed to establish a database connection.")

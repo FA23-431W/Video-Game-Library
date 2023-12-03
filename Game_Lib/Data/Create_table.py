@@ -4,10 +4,17 @@ import os
 import pandas as pd
 
 
+<<<<<<< HEAD
 
 def get_csv_files(directory):
     return [file for file in os.listdir(directory) if file.endswith('.csv')]
 
+=======
+def get_csv_files(directory):
+    return [file for file in os.listdir(directory) if file.endswith('.csv')]
+
+
+>>>>>>> 04a4a3d (implement add to wishlist function)
 def create_table_name(csv_file):
     return os.path.splitext(csv_file)[0]
 
