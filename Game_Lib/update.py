@@ -83,6 +83,7 @@ def update_game(conn):
         cur.execute(update_query, (value, gameID))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your game info has updated.")
   except mysql.connector.Error as e:
@@ -116,6 +117,7 @@ def update_publisher(conn):
         cur.execute(update_query, (value, publisherID))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your publisher info has updated.")
   except mysql.connector.Error as e:
@@ -149,6 +151,7 @@ def update_achievemnt(conn):
         cur.execute(update_query, (value, achievement))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your achievement info has updated.")
   except mysql.connector.Error as e:
@@ -171,31 +174,15 @@ def update_category(conn):
 def update_community(conn):
   try:
     cur = conn.cursor()
-    community = input("Enter a community that want to update:")
-    num = input("Enter the number of elements of the community that want to update(1-2):")
-    if int(num) > 2:
-      print("Invalid choice. Please try again.")
-    for i in range(int(num)):
-      element = input("Enter the element that want to update (gameID, dashboardID):")
-      value = input("Enter the new value:")
-      if element == "gameID":
-        update_query = """
-            UPDATE Community
-            SET gameID = %s
-            WHERE communityID = %s
-            """
-        cur.execute(update_query, (value, community))
-        conn.commit()
-      elif element == "dashboardID":
-        update_query = """
-            UPDATE Community
-            SET dashboardID = %s
-            WHERE communityID = %s
-          """
-        cur.execute(update_query, (value, community))
-        conn.commit()
-      else:
-        print("Invalid choice. Please try again.")
+    community = input("Enter a communityID that want to update:")
+    element = input("Enter the gameID for the community that want to update:")
+    update_query = """
+        UPDATE Community
+        SET gameID = %s
+        WHERE communityID = %s
+        """
+    cur.execute(update_query, (element, community))
+    conn.commit()
     print("Your community info has updated.")
   except mysql.connector.Error as e:
     print(f"An error occurred: {e}")
@@ -205,11 +192,11 @@ def update_dashboard(conn):
   try:
     cur = conn.cursor()
     dashboard = input("Enter a dashboard that want to update:")
-    num = input("Enter the number of elements of the dahsboard that want to update(1-3):")
-    if int(num) > 3:
+    num = input("Enter the number of elements of the dahsboard that want to update(1-4):")
+    if int(num) > 4:
       print("Invalid choice. Please try again.")
     for i in range(int(num)):
-      element = input("Enter the element that want to update (post, date, author):")
+      element = input("Enter the element that want to update (post, date, author,communityID):")
       value = input("Enter the new value:")
       if element == "post":
         update_query = """
@@ -235,7 +222,16 @@ def update_dashboard(conn):
           """
         cur.execute(update_query, (value, dashboard))
         conn.commit()
+      elif element == "communityID":
+        update_query = """
+            UPDATE Dashboard
+            SET communityID = %s
+            WHERE dashboardID = %s
+          """
+        cur.execute(update_query, (value, dashboard))
+        conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your dashboard info has updated.")
   except mysql.connector.Error as e:
@@ -283,6 +279,7 @@ def update_user(conn):
         cur.execute(update_query, (value, user))
         conn.commit()
       else:
+        num = num + 1
         print("Invalid choice. Please try again.")
     print("Your user info has updated.")
   except mysql.connector.Error as e:
